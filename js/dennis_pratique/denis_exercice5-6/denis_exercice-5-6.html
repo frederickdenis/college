@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercices 5 et 6</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        main{
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 30px;
+            width: 800px;
+        }
+        header{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            text-decoration: underline;
+        }
+        section{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Exercices 5 et 6</h1>
+            <h2>Frederick Denis</h2>
+        </header>
+        <section>
+            <h3>Exercice 5</h3>
+            <p>Une fonction retirant une taxe de 10% sur un salaire X lorsqu'il est supérieur à 4000$:</p>
+            <pre>
+                <samp>
+                    <code>
+function reductionSalaire(montant){
+
+    if (montant > 4000){
+        montant -= montant*0.1;
+        console.log ("Votre salaire est maintenant de " + montant + " $.")
+    } else {
+        console.log ("Votre salaire de " + montant + " $ est brut.");
+    }
+}
+reductionSalaire(5000);
+<!-- //le -= est un truc montré par un ami ! -->
+                    </code>
+                </samp>
+            </pre>
+        </section>
+        <section>
+                <h3>Exercice 6</h3>
+                <p>Un logigramme et une fonction déterminant le plus grand nombre entier parmis trois nombres:</p>
+                <img src="logigrammeex6.png" alt="">
+                <pre>
+                    <samp>
+                        <code>
+function nombrePlusGrand(nba, nbb, nbc) {
+    let nbGrand =
+        if(nba > nbb) {
+        nbGrand = nba
+        } else if (nbb > nbc) {
+        nbGrand=nbb
+        }else{
+        nbGrand=nbc
+    }
+    console.log = nbGrand
+    }
+    nombrePlusGrand (10,20,30)
+
+                        </code>
+                    </samp>
+                </pre>
+            </section>
+
+    </main>
+    
+</body>
+</html>

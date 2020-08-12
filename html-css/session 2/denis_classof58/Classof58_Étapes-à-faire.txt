@@ -1,0 +1,7 @@
+À faire :
+
+A] Convertir le document d'Adobe de XHTML vers HTML5 (structure et sémantique).
+B] Optimiser le CSS en fonction de la nouvelle structure HTML5 (id et class).
+C] Centraliser le contenu CSS interne avec la feuille de style originale d'Adobe.
+D] Remplacer position: absolute et les flottants (float)... Flex.
+E] Optimiser le HTML5 en raffinant et en poussant plus loin la sémantique des contenus.

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            text-align: left;
+        }
+        .fa-phone-volume{
+            font-size: 4em;
+            color: rgb(250, 0, 0);
+            
+        }
+        .fa-globe-americas{
+            font-size: 4em;
+            color:  rgb(58, 0, 250);
+        }
+        .jumbotron{
+          background-color:#ccc; 
+          margin: 2em 0;
+        }
+        .container-fluid [class^="col"]{
+          background-color: #69f;
+          border: solid 2px #333;
+          border-radius: 5px;
+          padding: 20px;
+          text-align: center;
+        }
+        main{
+          padding-top: 4em;
+        }
+        h3{
+          padding: 1em;
+        }
+    </style>
+
+    <title>Une grille ?</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="#">Grilles Bootstrap</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liens</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Désactivé</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu déroulant</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Une autre action</a>
+                  <a class="dropdown-item" href="#">Quelque chose d'autre</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Search">
+              <button class="btn btn-primary my-2 my-sm-0" type="submit">Recherche</button>
+            </form>
+          </div>  
+        </nav>  
+        <main role="main">
+          <div class="container-fluid text-center">
+            <h3>Version variées</h3>
+            <div class="row">
+              <div class="col-sm-12">
+                largeur 12 (sm)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                largeur 4 (sm)
+              </div>
+              <div class="col-sm-8">
+                largeur 8 (sm)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                largeur 4 (md)
+              </div>
+              <div class="col-md-8">
+                largeur 8 (md)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                largeur 6 (lg)
+              </div>
+              <div class="col-lg-6">
+                largeur 6 (lg)
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4">Largeur 4 (xl)</div>
+              <div class="col-xl-4">Largeur 4 (xl)</div>
+              <div class="col-xl-4">Largeur 4 (xl)</div>
+            </div>
+            <h3>Plusieurs rangées - lg</h3>
+            <div class="row">
+              <div class="col-lg-1">1 col</div>
+              <div class="col-lg-2">2 colonnes</div>
+              <div class="col-lg-3">3 colonnes</div>
+              <div class="col-lg-6">6 colonnes</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">12 colonnes</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">4 colonnes</div>
+              <div class="col-lg-8">8 colonnes</div>
+            </div>
+            <h3>Imbrication d'éléments 1</h3>
+            <div class="row">
+                <div class="col-lg-12">12 colonnes
+                  <div class="row">
+                    <div class="col-lg-3">3 colonnes</div>
+                    <div class="col-lg-6">6 colonnes</div>
+                    <div class="col-lg-3">3 colonnes</div>
+                  </div>
+                </div>
+              </div>
+            <h3>Imbrication d'éléments 2</h3>
+            <div class="row">
+              <div class="col-md-12">Premier niveau avec 12 colonnes
+              <div class="row">
+                <div class="col-md-8">Second niveau avec 8 colonnes
+                <div class="row">
+                  <div class="col-md-4">Troisième niveau avec 4 colonnes</div>
+                  <div class="col-md-6 col-md-offset-2">Troisième niveau avec 6 colonnes
+                  <div class="row">
+                    <div class="col-md-3 col-md-offset-1">Quatrième niveau avec 3 colonnes</div>
+                    <div class="col-md-5 col-md-offset-1">Quatrième niveau avec 5 colonnes</div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-4">Second niveau avec 4 colonnes</div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js" integrity="sha256-xzrHBImM2jn9oDLORlHS1/0ekn1VyypEkV1ALvUx8lU=" crossorigin="anonymous"></script>
+  </body>
+</html>

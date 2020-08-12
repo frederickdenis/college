@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX | Animaux</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #bloc-affichage{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="bloc-affichage"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    // script ici
+        fetch('https://raw.githubusercontent.com/LearnWebCode/json-example/master/animals-1.json')
+            .then(handleResponse)
+            .then(data => gereLesDatas())
+            .catch(error => console.log(error))
+
+            function handleResponse (response) {
+                let contentType = response.headers.get('content-type')
+                if (contentType.includes('application/json')) {
+                    return handleJSONResponse(response)
+                } else if (contentType.includes('text/html')) {
+                    return handleTextResponse(response)
+                } else {
+                    // Other response types as necessary. I haven't found a need for them yet though.
+                    throw new Error(`Sorry, content-type ${contentType} not supported`)
+                }
+            }
+
+            function handleJSONResponse (response) {
+                return response.json()
+                    .then(json => {
+                    if (response.ok) {
+                        return json
+                    } else {
+                        return Promise.reject(Object.assign({}, json, {
+                        status: response.status,
+                        statusText: response.statusText
+                        }))
+                    }
+                    })
+            }
+            function handleTextResponse (response) {
+                return response.text()
+                    .then(text => {
+                    if (response.ok) {
+                        return json
+                    } else {
+                        return Promise.reject({
+                        status: response.status,
+                        statusText: response.statusText,
+                        err: text
+                        })
+                    }
+                    })
+
+
+                function gereLesDatas(){
+                    // console.dir(data);
+                    
+
+                    for(var i in data){                    
+                        
+                        var espece = "";
+                        
+                        if(data[i].species == "cat"){
+                             espece = "chat";
+                        }else if(data[i].species == "dog"){
+                             espece = "chien";
+                        }
+
+                        document.querySelector("#bloc-affichage").innerHTML += `<p>${data[i].name} le ${espece} aime ${data[i].foods.likes} et n'aime pas ${data[i].foods.dislikes}</p><br>`;
+                        
+                    }
+
+                }
+            }
+
+
+
+
+
+        // $(document).ready( function (){
+        
+        //     $.ajax({
+        //         "type": "GET",
+        //         "url": "https://raw.githubusercontent.com/LearnWebCode/json-example/master/animals-1.json",
+        //         "dataType": "json"
+        //     })
+        //     .done( function( data, textStatus, jqXHR ) {
+                
+        //         function extraitTout(){
+        //             // console.dir(data);
+                    
+
+        //             for(var i in data){                    
+                        
+        //                 var espece = "";
+                        
+        //                 if(data[i].species == "cat"){
+        //                      espece = "chat";
+        //                 }else if(data[i].species == "dog"){
+        //                      espece = "chien";
+        //                 }
+
+        //                 document.querySelector("#bloc-affichage").innerHTML += `<p>${data[i].name} le ${espece} aime ${data[i].foods.likes} et n'aime pas ${data[i].foods.dislikes}</p><br>`;
+                        
+        //             }
+
+        //         }
+        //         extraitTout();
+
+        //         // FONCTION DE XAVIER 
+        //         //     function _e(a) {
+        //         //         console.log("Array : " + a);
+        //         //         return a.join(", ");
+        //         //     }
+                    
+        //         //     let msg5 = "";
+        //         //     data.forEach((prop, i) => {
+        //         //     msg5 += `<div class='taille-plus'>${i + 1}. Le ${prop.species == "cat" ? "chat " : "chien "} <strong>${prop.name}</strong> <i class="fas fa-${prop.species}"></i> aime : ${_e(prop.foods.likes)} et n'aime pas : ${_e(prop.foods.dislikes)}.</div>`;
+        //         //     });
+
+        //         // document.getElementById("bloc-affichage").innerHTML = msg5;
+
+
+        //     })
+
+        //     .fail( function (jqXHR, textStatus, errorThrown) {
+        //         console.log("errorThrown " + textStatus);
+        //     })
+            
+        //     .always (function (jqXHR, textStatus) {
+        //         console.log("Fin de l'exécution");
+        //     });
+        
+        // });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Démo des styles CSS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+    <body>
+      <h2 id="hautdepage">Comment donner du style à son contenu</h2>
+      <div id="container">
+          <div id="table">
+              <h3>Table des matières</h3>
+              <ol>
+                  <li><a href="#nocss">Introduction</a></li>
+                  <li><a href="#demobackgroundcolor">Changer la couleur d'un fond de page</a></li>
+                  <li><a href="#demostylescombines">Appliquer des styles combinés</a></li>
+                  <li><a href="#demostylespecifique">Appliquer un style à un élément spécifique</a></li>
+                  <li><a href="#democouleurtexte">Changer la couleur d'un texte</a></li>
+                  <li><a href="#demoaligntexte">Changer l'allignement d'un texte</a></li>
+                  <li><a href="#demogras">Rendre un texte gras</a></li>
+                  <li><a href="#demoitalique">Rendre un texte italique</a></li>
+                  <li><a href="#demodecoration">Ajouter des éléments décoratifs au texte</a></li>
+                  <li><a href="#democaracteres">Modifier l'espacement et la hauteur des lignes</a></li>
+                  <li><a href="#demomaj">Écrire en personne fâchée sur les réseaux sociaux</a></li>
+                  <li><a href="#demopolcar">Modifier la police de caractère d'un texte</a></li>
+                  <li><a href="#demofontsize">Modifier la grosseur des caractères</a></li>
+                  <li><a href="#demoimgborder">Contrôler le cadrage de votre image</a></li>
+                  <li><a href="#demoimgbackground">Créer des fonds de pages personnalisés</a></li>
+                  <li><a href="#demopuces">Modifier l'apparence d'une liste à puces</a></li>
+              </ol>
+           </div>
+           <div id="nocss">
+                <h3>Introduction</h3>
+                <p>L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <ul>
+                   <li><h1>EXEMPLE DE TITRE H1</h1></li>
+                   <li><h2>EXEMPLE DE TITRE H2</h2></li>
+                   <li><h4>EXEMPLE DE TITRE H4</h4></li>
+                </ul>
+                <ul>
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+                </ul>
+                <ol>
+                   <li>ceci est un exemple de liste à puces ordonnées</li>
+                   <li>ceci est un exemple de liste à puces ordonnées</li>
+                   <li>ceci est un exemple de liste à puces ordonnées</li>
+                </ol>
+                <h6><a href="#table">Retour</a></h6>
+           </div>
+           <div id="demobackgroundcolor">
+               <h3>Changer la couleur de fond d'une page</h3>
+               <p>La couleur du fond de la page (background color) change lorsque la déclaration suivante est appliquée au contenu:</p>
+                   <pre>
+                       <samp>
+                           <code>
+                                                               body{
+                                                                    background-color: aqua;
+                                                               }
+                           </code>
+                       </samp>
+                   </pre>  
+                <p id="backgroundcolor">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, ce texte sera utilisé tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demostylescombines">
+                <h3>Appliquer des styles combinés</h3>
+                <p>Il est aussi possible d'appliquer des styles a plusieurs éléments en même temps lorsque la déclaration suivante est appliquée au contenu:/</p>
+                   <pre>
+                       <samp>
+                           <code>
+                                                                    h1,h2,h3{
+                                                                        color:#ff0000;
+                                                                    }
+                           </code>
+                       </samp>
+                   </pre>
+                   <ul id="stylescombines">
+                   <li><h1>EXEMPLE DE TITRE H1</h1></li>
+                   <li><h2>EXEMPLE DE TITRE H2</h2></li>
+                   <li><h4>EXEMPLE DE TITRE H4</h4></li>
+                </ul>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div>
+                <h3>Appliquer un style à un élément spécifique</h3>
+                <p>Si vous voulez changer une des 3 lignes de l'exemple ci-haut, il faut simplement entrer la déclaration suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    h1{
+                                                                      color:#ff0000;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>
+                <ul>
+                   <li id="stylespecifique"><h1>EXEMPLE DE TITRE H1</h1></li>
+                   <li><h2>EXEMPLE DE TITRE H2</h2></li>
+                   <li><h4>EXEMPLE DE TITRE H4</h4></li>
+                </ul>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="democouleurtexte">
+                <h3>Changer la couleur d'un texte</h3>
+                <p>Vous pouvez changer la couleur d'un texte en entrant la déclaration suivante: </p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     color:#ff0000;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>
+                <p id="couleurtexte">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demoaligntexte">
+                <h3>Changer l'allignement d'un texte</h3>
+                <p>Afin d'alligner un texte, la déclaration doit être ce qui suit:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     text-align: center;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>   
+                <p id="aligntexte">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demogras">
+                <h3>Rendre un texte gras</h3>
+                <p>Afin de mettre de l'emphase sur certaines parties d'une page, vous pouvez lui appliquer la déclaration suivante pour rendre le caractère plus gras:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     font-weight: bold;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>
+                <p id="gras">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demoitalique">
+                <h3>Rendre un texte italique</h3>
+                <p>Il est aussi possible, afin de démarquer des mots particuliers de les mettre en italique avec la déclaration suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                      p{
+                                                                       font-style: italic;
+                                                                      }
+                        </code>
+                    </samp>
+                </pre>                    
+                <p id="italique"> Let's get to it.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demodecoration">
+               <h3>Ajouter des éléments décoratifs au texte</h3>
+               <p>Afin d'ajouter une ligne sous un texte, vous devez entrer la déclaration suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                  p{
+                                                                   text-decoration: underline;
+                                                                  }
+                        </code>
+                    </samp>
+                </pre>
+               <p id="decoration">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+               <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="democaracteres">
+                <h3>Modifier l'espacement et la hauteur des lignes</h3>
+                <p>il est possible de changer la hauteur ainsi que l'espacement occupé par les caractères en entrant les déclarations suivantes:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     line-height: 25px;
+                                                                     letter-spacing: 2px;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>        
+                <p id="caracteres">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demomaj">
+                <h3>Écrire en personne fâchée sur les réseaux sociaux</h3>
+                <p>Il vous est aussi possible de changer toutes les lettres minuscules d'un texte en majuscule et vice-versa en entrant la déclaration suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     text-transform: uppercase;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>
+                <p id="maj">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demopolcar">
+                <h3>Modifier la polide de caractère d'un texte</h3>
+                <p>Afin de changer la police de caractère d'un texte complet, vous devez vous assurer que vous avez tout d'abord accès à la dite police, et par la suite entrer la déclaration suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                p{
+                                                                 font-family: "Times new roman";
+                                                                }
+                        </code>
+                    </samp>
+                </pre>   
+                <p id="polcar">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demofontsize">
+                <h3>Modifier la grosseur des caractères</h3>
+                <p>Avec la déclaration suivante, on peut augmenter ou réduire la grosseur des caractères:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                                    p{
+                                                                     font-family: sans-serif;
+                                                                    }
+                        </code>
+                    </samp>
+                </pre>   
+                <p id="fontsize">L'utilisation du language <abbr title="Cascading Style Sheet">CSS</abbr> de concert avec le language <abbr title="Hyper Text Markup Language">HTML</abbr> permet d'ajouter du style à un contenu. Pour des fins de démonstration, certaines parties de ce texte seront utilisées tout au long de ce travail afin de constater les différences lorsque plusieurs styles <abbr title="Cascading Style Sheet"></abbr> sont appliqués sur la même structure <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demoimgborder">
+                <h3>Contrôler le cadrage de votre image</h3>
+                <p>Il est possible d'ajouter des bordures aux images retrouvées dans la page comme ceci:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                               img{
+                                                                  border: 20px solid #000000;
+                                                               }
+
+                                                               OU
+
+                                                               img{
+                                                                border: 15px solid #6d6d6d;
+                                                                margin: 20px;
+                                                               }
+
+                                                               OU
+
+                                                               img{
+                                                                   border: 20px solid #130258;
+                                                                   margin: 10px
+                                                               }
+                        </code>
+                    </samp>
+                </pre>
+                <img id= "chat" src="images/sansa.jpg" alt="chat" title="Lady Sansa" style="transform:rotate(90deg)" height="170" width="225">
+                <img id= "chat1" src="images/sansa.jpg" alt="chat" title="Lady Sansa" style="transform:rotate(90deg)" height="170" width="225">
+                <img id= "chat2" src="images/sansa.jpg" alt="chat" title="Lady Sansa" style="transform:rotate(90deg)" height="170" width="225">
+                <h6><a href="#table">Retour</a></h6>
+            </div>
+            <div id="demoimgbackground">
+                <h3>Créer des fonds de pages personnalisés</h3>
+                <p>Il est possible de créer des fonds d'écrans particuliers. Assurez-vous que la photo est convertie en format <abbr title="Portable Network Graphics">.PNG</abbr> puisque <abbr title="Cascading Style Sheets">CSS</abbr> ne suporte pas le format <abbr title="Joint Photographic Experts Group">.JPG </abbr>. L'image peut être soit répétitive ou simplement étendue sur toute la page avec la directive suivante:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                    body{
+                                                        background-image:url(puce-pointe-a-droite.png);
+                                                    }
+                        </code>
+                    </samp>
+                </pre>
+                <h6><a href="#table">Retour</a></h6>           
+            </div>
+            <div id="demopuces">
+                <h3>Modifier l'apparence d'une liste à puces</h3>
+                <p>Il est possible de modifier, ajouter une image ou de cacher l'apparence des puces dans un liste à puces ordonnée ou normale avec cette directive:</p>
+                <pre>
+                    <samp>
+                        <code>
+                                                         ul{
+                                                           list-style-type: none;
+                                                         }
+
+                                                         OU
+
+                                                         ul{
+                                                            list-style-image: url(puce-pointe-a-droite.png)
+                                                         }
+                        </code>
+                    </samp>
+                </pre>        
+                <ul id="puces1">
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+               </ul>
+               <ul id="puces2">
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+                   <li>ceci est un exemple de liste à puces</li>
+               </ul>
+               <h6><a href="#table">Retour</a></h6>
+            </div>
+        </div>
+        <div id="basdepage">
+            <p><small>Travail Réalisé par Frederick Denis pour le Cours de Création Web - décembre 2018</small></p>
+        </div>
+    </body>
+</html>
+        <!--           https://www.google.ca/search?q=change+jpg+to+png&rlz=1C1CHBF_frCA819CA819&oq=change+jpg+to&aqs=chrome.2.69i57j0l5.3799j1j4&sourceid=chrome&ie=UTF-8-->
+        <!--           https://www.google.ca/search?rlz=1C1CHBF_frCA819CA819&ei=xNQCXJnVEc-2gge9nKDoCg&q=jpg+definition&oq=jpg+meaning&gs_l=psy-ab.1.1.0i71l2.0.0..14383...0.0..0.0.0.......0......gws-wiz.4fWTuLLlDLw-->
+        <!--        https://stackoverflow.com/questions/20061774/rotate-an-image-in-image-source-in-html-->

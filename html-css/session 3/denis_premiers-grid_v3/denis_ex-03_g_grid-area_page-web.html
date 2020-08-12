@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>grid area- page web</title>
+    <style>
+        body{
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 1.2em;
+            background-color: #231F20;
+        }
+        main{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            text-align: center;
+        }
+        h1{
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+        }
+        h3{
+            font-family: "Open Sans Condensed", sans-serif;
+            margin:0;
+        }
+        div{
+            margin: 50px auto;
+            align-content: center;
+        }
+        div > div{
+            min-width: 5em
+        }
+        footer{
+            background: url(images/logo-blanc.png) no-repeat;
+            background-size: 5em;
+            background-position: center;
+            width: 70%;
+            height: 300px
+        }
+        input{
+            width: 500px;
+            border: 3px solid rgb(144, 144, 144);
+            box-shadow: 0 0 5px 5px rgb(190, 190, 190);
+            padding: 5px;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 1px;
+            grid-template-areas: 'header header header header header''menu main main aside aside''menu footer footer footer footer';
+        }
+        .grid-container > div{
+            background-color: #231F20;
+            border: 2px solid #2f2f2f;
+            margin: 2px;
+            padding: 10px;
+            text-align: center;
+        }
+        .item1{
+            grid-area: header;
+        }
+        .item2{
+            grid-area: menu;
+        }
+        .item3{
+            grid-area: main;
+        }
+        .item4{
+            grid-area: aside;
+        }
+        .item5{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Grid area- page web</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div class="grid-container">
+            <div class="item1">header</div>
+            <div class="item2">menu</div>
+            <div class="item3">main</div>
+            <div class="item4">aside</div>
+            <div class="item5">footer</div>
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

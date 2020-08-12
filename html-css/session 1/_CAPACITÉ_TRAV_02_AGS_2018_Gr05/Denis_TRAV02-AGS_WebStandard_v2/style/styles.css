@@ -1,0 +1,118 @@
+html, body, duv, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, accronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thread, tr, th, td{
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+ol, ul, li{
+    list-style: none;
+}
+header, nav, footer, section{
+    display: block;
+}
+body{
+    background: url(images/denis_images/milky-way-2695569.jpg);
+    font-family: roboto, sans-serif;
+    font-size: 12px;
+    text-align: justify;
+}
+#wrapper{
+    width: 960px;
+    height: 967px;
+    margin: 0 auto;
+    background-color: rgba(57, 57, 59, 0.5)
+}
+header{
+    width: 900px;
+}
+header a > img{
+    padding:20px; 
+}
+nav{
+    float: right;
+    width: 650px;
+    height: 45px;
+    margin: 40px -120px 0 0;
+    background: url(images/navbar.png) no-repeat
+}
+nav li{
+    text-decoration: none;
+    float: left;
+    margin-top: -5px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+nav li a{
+    text-decoration: none;
+    margin-left: 18px;
+    padding-right: 23px;
+    color: #fff;
+/*    font-weight: bold;*/
+}
+nav li a:hover{
+    color: #acabab;
+    font-weight: bold;
+}
+#latest-line{
+    margin: 25px 0 0 25px;
+}
+section{
+    float:left;
+    width: 500px;
+    padding-top: 50px;
+    padding-left: 60px;
+}
+blockquote{
+    float: left;
+    margin: 15px 0 0 25px;
+    width: 375px;
+    padding: 45px 45px 35px 90px;
+    background: url(images/quotes.png) no-repeat 20px 20px rgba(178,178,169,0.1);
+    min-height: 90px;
+    border-radius: 12px;
+}
+blockquote, h1{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+}
+.client{
+    float: right;
+    margin-top: 40px;
+    color: #fff;
+}
+aside{
+    background: url(images/sidebar_design.png) no-repeat;
+    float: right;
+    height: 495px;
+    width: 342px;
+    margin: 30px 30px 90px 0;
+}
+footer{
+    background-color: rgba(57, 57, 59, 0.5);
+    background: url(images/denis_images/footer2.png) no-repeat;
+    width:960px;
+    height: 150px;
+    float: left;
+    margin: 100px 0 0 0 ;
+    position: 
+}
+#footer_logo{
+    float: right;
+    margin: 25px 10px 0 0;
+    font-size: 9px;
+}
+figure{
+    float: left;
+    color: #fff;
+}
+figure > img{
+    float:left;
+}
+em{
+    font-weight: lighter;
+}
+aside > img{
+    overflow: scroll;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Denis_TRAV01_InteractiviteInterface </title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Travail 01 - Interactivité de l'interface</h1>
+            <h3>Par Frederick Denis</h3>
+        </header>
+        <div class="quest1">
+            <h4>Question 1</h4>
+            <p>Produire le code JavaScript d’une fonction qui compte le nombre de clic produit sur une image. Les différentes valeurs de ce compteur devront s’afficher, à chaque clic, dans l’interface et dans la console de débogage du navigateur.</p>
+            <aside>
+                <img src="click.jpg" alt="click-la-poigne-tu" id="compteurclic">
+                <h5 id="nbclic">Vous n'avez pas encore cliqué</h5>
+            </aside>
+        </div>
+        <div class="quest2">
+            <h4>Question 2</h4>
+            <p>Produire le logigramme et la traduction de l’algorithme en pseudocode, du schéma ci-dessous (pas de JavaScript).</p>
+            <div id="reponse2">
+                <img src="diagrammejoie.jpg" alt="diagrammejoie" title="diagramejoie">
+                <img src="denis_question2.jpg" alt="logigramme">
+            </div>          
+<!-- fonction etreHeureux
+    variable heureux (peut être vraie ou fausse)
+    variable vouloir (Peut être vraie ou fausse)
+
+    si heureux est vrai
+        continuez ce que vous faites
+    sinon si heureux est faux
+        voulez-vous etre heureux ?
+            changez quelque chose !
+        sinon
+            continuez ce que vous faites
+            
+fin de la fonction etreHeureux -->
+        </div>
+        <div class="quest3">
+            <h4>Question 3</h4>
+            <p>Produire le code JavaScript qui simule l’algorithme du bouton à bascule (Toggle) sur une image représentant une ampoule électrique qui est, tour à tour, allumée ou éteinte. Lors de chaque clic sur l’ampoule, le fond de la page change de noir à blanc selon l’état.</p>
+            <div id="elementampoule" class="elementampoule">
+                <img id="imageampoule" src="ampouleoff.png" alt="ampoule" height="350" width="250">
+            </div>
+        </div>
+        <div class="quest4">
+            <h4>Question 4</h4>
+            <p>Produire le pseudocode et le code JavaScript qui détermine et imprime le plus grand de 10 valeurs.</p>
+            <div class="q4">
+                <pre>
+                    <samp>
+                        <code>
+function plusGrandDeDix(){
+
+    //     //INIT
+    
+    //     var chiffres = [10, 234, 35, 467, 59, 616, 189, 824, 92, 1019];
+    //     var nbrPlusGrand = 0;
+        
+    //     //LOGIQUE
+    
+    //     for( i in chiffres){
+    //         if(chiffres[i] > nbrPlusGrand){
+    //             nbrPlusGrand = chiffres[i];
+    //         }
+    //     //CALL AND PRINT
+    //     }console.log (nbrPlusGrand);
+    // }
+    // plusGrandDeDix();
+                        </code>
+                    </samp>
+                </pre>
+            </div>
+        </div>
+        <div class="quest5">
+            <h4>Question 5</h4>
+            <p>Produire le logigramme et la traduction en pseudocode de l’algorithme énoncé comme suit : Vous êtes banquier. Un client vient vous demander un prêt. Si le dossier de crédit du demandeur est bon et que le montant du prêt demandé est inférieur à 2000 dollars, alors accordez-lui le prêt automatiquement, sinon il doit consulter un gérant. Autrement dit, il ne sera pas possible de demander le montant voulu pour le prêt si le crédit du demandeur n’est pas bon. Notez bien que si le dossier de crédit n'est pas bon, ou bien que le montant n’est pas inférieur à 2000$, alors un message respectif doit s’afficher en conséquence.</p>
+            <img src="quest5.png" alt="question5">
+        </div>
+        <div class="quest6">
+            <h4>Question 6</h4>
+            <p>Créer une fonction JavaScript qui aura pour objectif de récupérer et de valider le nom et le mot de passe de l’utilisateur à partir de deux champs d’un formulaire. Si le nom et le mot de passe saisis sont valides avec un nom et un mot de passe de votre cru, alors, redirigez l’utilisateur vers une page en conséquence, sinon déclenchez un message d’erreur.</p>
+            <form action="" method="get" id="connection"></form>
+                <section class="infoconnection">
+                    <label for="nom">Votre Nom d'utilisateur :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom d'utilisateur" title="nom" tabindex="1" autocomplete="off">
+                    <label for="mdp">Votre Mot de passe :</label>
+                    <input type="text" id="mdp" name="mdp" placeholder="Mot de passe" title="courriel" tabindex="2" autocomplete="off">
+                    <button id="fin" type="submit">Connection</button>
+                    <h5 id="messageconnection">Entrez vos informations de connection.</h5>
+                </section>
+        </div>
+        <div class="quest7">
+            <h4>Question 7</h4>
+            <p>Produire le code JavaScript à partir de l’énoncé suivant : Le taux de la taxe sur la consommation vient de passer à 17%. On veut aider le personnel de restaurant en leur imprimant, pour des sommes de 1 à 100 dollars (par tranche de 1$), le montant de la taxe à collecter (pour chacune de ces tranches). Imprimez les cents montants de la taxe à collecter.</p>
+            <section class="taxe">
+                <p class="resultattaxe"></p>
+            </section>
+        </div>
+        <footer>
+            <img src="logo-blanc.png" alt="logo">
+        </footer>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
+<!-- https://www.pinterest.ca/pin/449656344025767416/ -->
+<!-- Image par<a href="https://pixabay.com/fr/users/Boskampi-3788146/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1873854">Boskampi</a> de <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1873854">Pixabay</a> -->

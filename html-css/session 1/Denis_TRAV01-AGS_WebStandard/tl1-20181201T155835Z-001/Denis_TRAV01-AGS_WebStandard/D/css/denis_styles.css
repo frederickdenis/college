@@ -1,0 +1,71 @@
+body{
+    background-color: #000000;
+    color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+}
+
+.description{
+    display: none;
+}
+
+.img-legend {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-legend a img{
+    background:#dadada;
+    border: 2px solid #b5b5b5;
+    float: left;
+    margin: 0;
+    padding: 10px;
+}
+
+.img-legend a .bouton{
+    background:url(../images/bouton.png) 0 0 no-repeat;
+    bottom: 0;
+    color: #8e8e8e;
+    font-size: 12px;
+    height: 32px;
+    left: 10px;
+    padding: 5px;
+    position:absolute;
+    width:135px;
+}
+
+.img-legend a:hover .bouton {
+    visibility: hidden;
+}
+
+.img-legend a:hover .description{
+    background: #dadada;
+    border-top: 2px solid #b5b5b5;
+    bottom: 12px;
+    display:block;
+    left:12px;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: justify;
+    width: 300px;
+}
+
+.img-legend a:hover .description h2{
+    color:#8e8e8e;
+    font-size: 12px;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+.img-legend a:hover .description p{
+    color:#8e8e8e;
+    font-size: 10px;
+    margin:0;
+    padding:0;
+}
+footer{
+    position:absolute;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Jeu de vitesse</title>
+</head>
+<body>
+    <span id="meilleurScore">Record:</span><br><span id="dernierscore">Dernier score:</span>
+    
+    <main>
+        <div>
+            <a id="ballon"></a>
+        </div>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        //terrain et style
+        
+        $("main").width(575);
+        $("main").height(325);
+        $("main").css("background", "url(./images/terrain_basketball.png)");
+        $("main").css("background-position", "left");
+        $("main").css("background-repeat", "no-repeat");
+
+
+        $("main").css("border", "2px solid #000");
+        $("div").width(60);
+        $("div").height(60);
+        $("div").css("background", "url(./images/ballon.png)");
+        $("div").css("background-repeat", "no-repeat");
+        $("div").css("background-position", "center");
+        $("div").css("position", "absolute");
+        $("div").css("text-align", "center");
+        $("div").css("color", "black");
+        $("div").css("font-weight", "bold");
+        $("div").css("padding-top", "20px");
+        $("div").css("cursor", "pointer");
+        
+
+
+        var meilleurScore = null; //pas encore joué
+        // var dateDuClic = new Date();
+
+        function placementAleatoireDuBouton(){
+
+            $("div").css("left", $("main").width()*Math.random());
+            $("div").css("top", $("main").height()*Math.random());
+            // $("div").html("ici");
+            $("div").off("click");
+            $("div").on("click", {"dateDepart": new Date()},
+                jeuTempsReaction
+                );
+            }
+        // placementAleatoireDuBouton();
+
+        function jeuTempsReaction(event){
+            
+            var dateDuClic = new Date();
+            var tempsDeReaction = dateDuClic - event.data.dateDepart;
+
+            $("div").html(tempsDeReaction+`ms  <span id="rejouer">Rejouer?</span>`)
+            $("#rejouer").css("background-color", "#000");
+            $("#rejouer").css("color", "#fff");
+            $("#rejouer").css("margin-right", "40px");
+            $("#rejouer").css("border-radius", "10px");
+            $("#rejouer").css("font-size", "15px");
+            $("div").off("click");
+            $("div").on("click", placementAleatoireDuBouton);
+
+            afficheRecord(tempsDeReaction);
+        }
+
+        function afficheRecord(score){
+            
+            if(meilleurScore == null || meilleurScore > score){
+                meilleurScore = score;
+                $("#meilleurScore").html("Record: " + score + "ms")
+
+            }
+        }
+
+        $("div").css("left", $("main").width()*Math.random());
+        $("div").css("top", $("main").height()*Math.random());
+        $("div").on("click", {"dateDepart" : new Date()}, jeuTempsReaction);
+
+
+        var tempsDeReaction = dateDuClic - event.data.dateDepart;
+
+        $("div").off("click");
+        $("div").on("click", placementAleatoireDuBouton);
+
+        afficheRecord();
+
+   
+
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+    </script>
+</body>
+</html>

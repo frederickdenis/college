@@ -1,0 +1,67 @@
+body{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2em;
+    background-color: #231F20;
+}
+main{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    text-align: center;
+}
+h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+}
+h3{
+    font-family: "Open Sans Condensed", sans-serif;
+    margin:0;
+}
+div{
+    margin: 50px auto;
+    align-content: center;
+}
+footer{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-size: 75%;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+}
+input{
+    width: 500px;
+    border: 3px solid rgb(144, 144, 144);
+    box-shadow: 0 0 5px 5px rgb(190, 190, 190);
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.bouton{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px #fff;
+    border-radius: 30px;
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color:#fff;
+}
+.bouton:hover{
+    background-color: #fff;
+    color:#000;
+    -webkit-transition: .5s; 
+    font-weight: bold;
+}
+.bouton:active{
+    background-color: rgb(124, 112, 115);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0);
+    -webkit-transition: .1s;
+}
+p{
+    margin: 0.5em;
+}

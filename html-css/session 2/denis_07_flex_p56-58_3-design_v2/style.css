@@ -1,0 +1,33 @@
+body{
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+}
+section{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+div{
+    border: solid 10px #000;
+}
+#design1{
+    display: flex;
+    justify-content: center;
+}
+#design2{
+    display: flex;
+    justify-content: flex-start;
+}
+#design3{
+    display: flex;
+    justify-content: space-around;
+}
+.boite{
+    background-color: #fff;;
+    border: solid 10px #000;
+    width: 400px;
+}
+.boitespeciale{
+    width: 200px;
+}

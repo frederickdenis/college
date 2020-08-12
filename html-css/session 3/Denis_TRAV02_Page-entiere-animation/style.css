@@ -1,0 +1,156 @@
+
+body{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2em;
+    background-color: #231F20;
+    background: url(images/foret.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.animated {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    text-align: center;
+    background-color: #ffffff85;
+    padding: 10em 0;
+}
+h1{
+    font-weight: 900;
+    font-size: 5em;
+}
+.zec{
+    color: #015717;
+    font-size: 2em;
+}
+h3{
+    font-family: "Open Sans Condensed", sans-serif;
+    margin:0;
+    text-align: justify;
+}
+div{
+    margin: 50px auto;
+    align-content: center;
+}
+
+section{
+    background-color: #ffffff85;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2% 0;
+    margin: 2%; 
+}
+section > p{
+    font-size: 2em;
+    text-align: justify;
+    padding: 1em;
+    font-weight: bold;
+}
+#son1imgs{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    padding: 2%;
+}
+#saisons {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    text-align: center;
+}
+#saisons section{
+    background-color: #ffffff85;
+    width: 40%;
+
+}
+.contour{
+    width: 300px;
+    height: 300px;
+    border: 20px solid #fff;
+    border-bottom: 50px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: #000;
+    box-shadow: rgb(82, 82, 82) 10px 10px 10px;
+}
+#cvs2{
+    background-color: #fff;
+}
+h2{
+    color: #fff;
+    padding: 0 1em;
+}
+.iconesanimees{
+    background-color: #ffffff85;
+    text-align: center;
+    padding: 5%;
+}
+/* https://css-tricks.com/the-shapes-of-css/ */
+.diamond {
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-bottom-color: #fff;
+    position: relative;
+    margin: 0;
+    top: -155px;
+  }
+  .diamond:after {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-top-color: #fff;
+  }
+
+  footer{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+  footer div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  canvas{
+      width: 100%;
+      height: 50px;
+  }
+
+
+@media screen and (min-width: 100px) and (max-width: 1020px){
+    #saisons{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+    #saisons > section{
+        width: 90%;
+    }
+}
+

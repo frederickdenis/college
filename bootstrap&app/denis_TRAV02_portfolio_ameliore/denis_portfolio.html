@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- STYLE BOOTSTRAP COMPILÉ (NPM INSTALL, MODIFIER, NPM RUN CSS/JS POUR RECOMPILER) -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+    <style>
+      /* STYLE ICI */
+      html{
+        scroll-behavior: smooth;
+      }
+      h1, h2{
+        font-size: 3em;
+      }
+      h3{
+        font-size: 2.5em;
+      }
+      h1{
+        font-weight: lighter;
+        font-style: italic;
+      }
+    
+      body{
+        background: url(images/worldmap.jpg) fixed no-repeat center;
+        background-size: cover;
+        color: #fff;
+      }
+      .container-fluid{
+        background: #00000099; 
+        width: 85%;
+      }
+      .fa-html5{
+        color: orange;
+      }
+      .fa-css3-alt{
+        color: blue;
+      }
+      .fa-js-square{
+        color­: #fff;
+      }
+      .fa-adobe{
+        color: red;
+      }
+      .fa-react{
+        color: rgb(47, 150, 247);
+      }
+      .fa-wordpress{
+        color: #fff;
+      }
+      .fa-php{
+        color: rgb(140, 139, 236);
+      }
+      p{
+        font-size: 1.2em;
+      }
+      .presentation{
+        margin: 0;
+      }
+      .container-icone-competence{
+        width: 96px;
+        height: 96px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+      }
+    
+      .descriptif{
+        font-size: 0.8em;
+        font-style: italic;
+      }
+
+      .logiciel{
+        box-shadow: 5px 5px 5px #000;
+      }
+      i{
+        text-shadow: 5px 5px 5px #000;
+      }
+      abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+      }
+      .fa-linkedin{
+        color: #0077b5;
+      }
+      .image-realisation{
+        box-shadow: 10px 10px 10px #000;
+      }
+      
+    </style>
+
+    <title>Starter bootstrap local</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top bg-dark d-flex justify-content-between">
+        <a class="navbar-brand" href="#landing">Fred D.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#presentation">Présentation</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#competences">Compétences</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#realisations">Réalisations</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <!-- CONTENU -->
+
+        <div class="container-fluid">
+
+            <!-- LANDING -->
+          <div class="text-center min-vh-100 d-flex justify-content-center align-items-center flex-column" id="landing">
+            <h2>Frederick Denis</h2>
+            <h1>Développeur Front-End</h1>
+          </div>
+
+          <!-- PRESENTATION -->
+          <div class="container-presentation pt-5 min-vh-100 d-flex justify-content-center align-items-center flex-column" id="presentation">
+            <h3>Présentation</h3>
+            <div class="row presentation d-flex justify-content-center text-justify col-12 pt-5 pb-5">
+              <div class="d-flex justify-content-between"></div>
+              <p class="col-11">
+                Bienvenue sur mon Portfolio personnel. Je me présente, je m'appelle Frederick Denis. Je suis développeur Front-End formé au Cégep Limoilou dans le cadre de mon <abbr title="Atestation d'études collégiales">AEC</abbr> en Production en Médias interactifs; graduation en mars 2020. Vous trouverez sur ce site quelques-uns de mes projets favoris lors de mon cours, ainsi que des projets personnels. J'aime les choses qui sont simples et efficaces; cette doctrine a inspiré mon processus de création de ce document.</p>
+            </div>
+          </div>
+
+        <!-- COMPETENCES -->
+
+          <div class="container-competences min-vh-100 d-flex justify-content-center align-items-center flex-column" id="competences">
+            <h3>Compétences</h3>
+              <div class="row competences d-flex justify-content-around align-items-center pt-5 col-6 col-lg-12">
+                <div class="container-icone-competence d-flex align-items-center">
+                  <img class="img-competence langage" src="images/html-logo.png" height="96px" width="96px" alt="html5" title="HTML5">
+                  
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                  <img class="img-competence langage" src="images/css-logo.png" height="96px" width="96px" alt="css3" title="CSS3">
+                  
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                  <img class="img-competence langage" src="images/js-logo.png" height="96px" width="96px" alt="javascript" title="Javascript">
+                  
+                </div>
+                
+                <div class="container-icone-competence d-flex align-items-center">
+                  <img class="img-competence langage" src="images/php-logo.png" height="96px" width="96px" alt="php" title="PHP">
+                  
+                  
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                  <i class="fab fa-react fa-6x langage" title="React"></i>
+                 
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                  <i class="fab fa-wordpress fa-6x langage" title="Wordpress"></i>
+                  
+                </div>
+              </div>
+              <div class="row competences d-flex justify-content-around align-items-center pt-5 col-6 col-lg-12">
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img class="img-competence logiciel" src="images/illustrator.png" height="96px" width="96px" alt="illustrator" title="Adobe Illustrator">
+                    
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img class="img-competence logiciel" src="images/photoshop.jpg" height="96px" width="96px" alt="photoshop" title="Adobe Photoshop">
+                    
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img class="img-competence logiciel" src="images/aftereffects.png" height="96px" width="96px" alt="aftereffects" title="Adobe After Effects">
+                    
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img  class="img-competence logiciel"src="images/premiere.png" height="96px" width="96px" alt="premiere" title="Adobe Premiere">
+                    
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img class="img-competence logiciel" src="images/xd.jpg" height="96px" width="96px" alt="xd" title="Adobe XD">
+                    
+                </div>
+                <div class="container-icone-competence d-flex align-items-center">
+                    <img class="img-competence logiciel" src="images/audition.png" height="96px" width="96px" alt="xd" title="Adobe Audition">
+                </div>
+              </div>
+            </div>
+
+        <!-- REALISATIONS -->
+
+            <div class="container-realisations min-vh-100 d-flex justify-content-center align-items-center flex-column pt-5" id="realisations">
+              <h3>Réalisations</h3>
+              <div class="row competences d-flex justify-content-center pt-5">
+                <div class=" row col-12 justify-content-around">
+                  <div class="figure-realisation view zoom">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/rotoscopie.png" alt="rotoscopie" title="Muybridge au galop - Rotoscopie" class="mt-5"></a>
+                    <p>Rotoscopie<br><span class="descriptif">Animation</span></p>
+                  </div>
+                  <div class="figure-realisation">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/boutique.png" alt="boutique" title="Boutique en ligne avec Bootstrap" class="mt-5"></a>
+                    <p>Boutique fictive <br><span class="descriptif">Design adaptatif</span></p>
+                  </div>
+                  <div class="figure-realisation">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/meteo.png" alt="meteo" title="Application météo personnelle" class="mt-5"></a>
+                    <p>Web app météo <br><span class="descriptif">Application mobile</span></p>
+                  </div>
+                </div>
+                <div class="row col-12 justify-content-around">
+                  <div class="figure-realisation">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/relais.png" alt="relais" title="Site web - Le Relais de la Pointe-aux-Écureuils" class="mt-5"></a>
+                    <p>Le Relais des Écureuils <br><span class="descriptif">Projet complet</span></p>
+                  </div>
+                  <div class="figure-realisation">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/traktiq.png" alt="traktiq" title="Logo des perles d'odeur de Traktiq" class="mt-5"></a>
+                    <p>Logo de Traktiq <br><span class="descriptif">Design</span></p>
+                  </div>
+                  <div class="figure-realisation">
+                    <a href="javascript:;"><img class="image-realisation" height="150px" width="250px" src="images/robin-capot.png" alt="robin-capot" title="Les aventures de Robin Capot" class="mt-5"></a>
+                    <p>Robin Capot <br><span class="descriptif">Doublage et montage</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          <!-- INFO CONTACT -->
+
+            <div class="container-contact pt-5 min-vh-100 d-flex justify-content-center align-items-center flex-column text-center" id="contact">
+              <h3>Contact</h3>
+              <div class="row d-flex justify-content-around pt-5 pb-5 col-12">
+                <button class="btn secondary" data-toggle="modal" data-target="#exampleModal">
+                  <i class="far fa-envelope fa-6x text-light"></i>
+                </button>
+                <button class="btn secondary"><i class="fab fa-linkedin fa-6x"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODALE CONTACT -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">Joignez-moi par email:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Adresse email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Entrez votre message"></textarea>
+                  </div>
+                  
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary">Envoyer <i class="fas fa-paper-plane"></i> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- LIBRAIRIES LOCALES (CTRL-C/V CDN DANS URL, SAVE AS ET DEPOSER DANS LE DOSSIER DIST) -->
+    <script src="dist/js/jquery.slim.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelector(".fa-linkedin").addEventListener("click", function(){
+        window.open("https://www.linkedin.com/in/frederickdenis/","_blank");
+      })
+    </script>
+  </body>
+</html>

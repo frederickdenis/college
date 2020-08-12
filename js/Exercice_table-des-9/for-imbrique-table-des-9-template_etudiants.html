@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tableau multi-dimension</title>
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900">
+ 
+</head>
+<body>
+
+  <header>
+    <h1>Tables des 9</h1>
+    <h4>Tableau (données tabulaires) générées par JavaScript.</h4>
+  </header>
+
+  <section class="bloc-affichage"></section>
+
+  <script>
+  
+      /**
+      * Génère la table de multiplication par 'deCombien'
+      * à l'aide de deux boucles imbriquées.
+      */    
+      function genereTableau(deCombien)
+      {
+          let chaineDesNombres = `<table>`;
+
+          for (i = 1; i <= deCombien; i++) {
+              chaineDesNombres += `<tr>`;
+          
+              for (j = 1; j <= deCombien; j++) {
+          
+                  if ((i == 1) || (j == 1)) {
+                      chaineDesNombres += `<th>`;
+                  } else {
+                      chaineDesNombres += `<td>`;
+                  }
+                  chaineDesNombres += `${i * j} </td>`;
+              }
+              chaineDesNombres += `</tr>`;
+          }
+
+          chaineDesNombres += `</table>`;
+          
+          document.querySelector(".bloc-affichage").innerHTML = chaineDesNombres;
+      }
+
+      genereTableau(10);
+  </script> 
+
+</body>
+</html>

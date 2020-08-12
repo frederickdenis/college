@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha256-BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8=" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>CSS3 de A à Z</title>
+</head>
+<body>
+    <main>
+        <header class="entete-grand">
+            <h1>Le CSS3 de A à Z</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div id="menugauche">
+            <nav>
+                <!-- menu de navigation généré en JQuery -->
+            </nav> 
+        </div>
+ 
+        <div id="contenu">
+
+            <dl>
+                <!-- Animation -->
+                <dt id="animation"><h4 data-title="Animation">A comme Animation</h4></dt>
+                <dd class="anime"> Je suis une boîte animée !</dd>
+
+                <!-- background multiples -->
+                <dt id="background"><h4 data-title="Background">B comme Background multiples</h4></dt>
+                <dd class="bgmultiple"><p></p></dd>
+
+                <!-- border image -->
+                <dt id="bordure"><h4 data-title="Border Image">B comme Bordure</h4></dt>
+                <dd><div>
+                    <p id="border">Ma bordure est une image répétée !</p>
+                </div></dd> 
+                
+                <!-- boxshadow -->
+                <dt id="boxshadow"><h4 data-title="Box Shadow">B comme Box Shadow</h4></dt>
+                <dd><div>
+                    <p class="ombre">J'ai peur de mon ombre !</p>
+                </div></dd>
+
+                <!-- couleur et opacité -->
+                <dt id="color"><h4 data-title="Couleur et opacité">C comme couleur</h4></dt>
+                <dd><div>
+                    <p class="couleurbg">Couleur d'arrière plan</p>
+                    <p class="opacite">Couleur de texte</p>
+                </div></dd>
+
+                <!-- colonnes -->
+                <!-- https://www.w3schools.com/css/css3_multiple_columns.asp -->
+                <dt id="column"><h4 data-title="Colonnes">C comme colonnes</h4></dt>
+                <dd><div>
+                    <p class="colonne">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                    
+                </div></dd>
+
+                <!-- gradient -->
+                <dt id="gradient"><h4 data-title="Dégradé radiaire">D comme dégradé</h4></dt>
+                <dd><div>
+                    <p class="degrade">Ma couleur est dégradée</p>
+                </div></dd>
+
+                <!-- fonte -->
+                <dt id="fontface"><h4 data-title="Fontes">F comme fonte</h4></dt>
+                <dd id="fontachanger">Ma fonte est changée !</dd>
+
+                <!-- formes géométriques -->
+                <dt id="geometrie"> <h4 data-title="Géométrie">G comme géométrie</h4></dt>
+                <dd><div class="formesflex">
+                    <p class="carre"></p>
+                    <p class="cercle"></p>
+                    <p class="triangle"></p>
+                    <p class="rectangle"></p>
+                    <p class="ovale"></p>
+                    <p class="trapeze"></p>
+                </div></dd>
+
+                <!-- flex horizontal -->
+                <dt id="flexh"><h4 data-title="Horizontal">H comme horizontal</h4></dt>
+                <dd><div id="horizontal">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div></dd>
+
+                <!-- rotation -->
+                <dt id="rotate"><h4 data-title="Rotation">R comme rotation</h4></dt>
+                <dd><div id="rotation">
+                    <p class="rotateleft">Rotation à gauche</p>
+                    <p class="rotateright">Rotation à droite</p>
+                </div></dd>
+
+                <!-- sélecteurs -->
+                <dt id="selector"><h4 data-title="Sélecteurs">S comme sélecteurs</h4></dt>
+                <dd><div id="selecteur">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div></dd>
+
+                <!-- text Shadow -->
+                <dt id="boxshadow"><h4 data-title="Texte ombré">T comme texte ombré</h4></dd>
+                <dd id="ombretexte">J'ai aussi peur de mon ombre !</dd>
+
+                <!-- transition -->
+                <dt id="transit"><h4 data-title="Transitions">T comme transition</h4></dt>
+                <dd><div class="bouton">
+                    <p>Je transitionne !</p>
+                </div></dd>
+
+                <!-- flex vertical -->
+                <dt id="flexv"><h4 data-title="Vertical">V comme vertical</h4></dt>
+                <dd><div id="vertical">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div></dd>
+                <dt id="joke"><h4 data-title="Z comme...">Z comme...</h4></dt>
+                <dd><div>
+                    <p>Z'ai fini !</p>
+                </div></dd>
+            </dl>
+
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+    </script>
+</body>
+</html>

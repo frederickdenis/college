@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Maquette 1</title>
+    <style>
+        /* point de rupture cell/smartphone/tablette/TV */
+        body{
+            font-family: sans-serif;
+        }
+        header{
+            background-color: black;
+            color: #fff;
+            padding: 5% 0 2% 0;
+            text-align: center;
+        }
+        p{
+            margin: 0 0 5% 5%;
+        }
+        /* SAMSUNG GALAXY S5 */
+        @media screen and (max-width: 360px){
+            h1{
+                font-size: 1em
+            }
+            div{
+                width: 5em;
+                height: 5em;
+                background-color:blue;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                margin: 0 auto;
+                max-width: 80%;
+            }
+            section{
+                display: flex;
+            }
+            p{
+                max-width: 35%;
+                font-size: 10px;
+            }
+        }
+        /* GOOGLE PIXEL 2 */
+        @media screen and (min-width: 361px) and (max-width: 411px){
+            h1{
+                font-size: 1.5em
+            }
+            div{
+                width: 6em;
+                height: 6em;
+                background-color:rgb(4, 151, 24);
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                /* max-width: 60%; */
+                padding: 1em;
+                margin: 0 auto;
+                max-width: 80%;
+            }
+            section{
+                display: flex;
+            }
+            p{
+                max-width: 35%;
+                font-size: 12px;
+            }
+        }
+        /* IPAD PRO */
+        @media screen and (min-width: 412px) and (max-width: 1024px){
+            h1{
+                font-size: 2.5em
+            }
+            div{
+                width: 15em;
+                height: 15em;
+                background-color:rgb(151, 4, 4);
+            }
+            main{
+                display: flex;
+                flex-direction: row;
+                /* max-width: 60%; */
+                padding: 1em;
+                margin: 0 auto;
+                max-width: 80%;
+            }
+            section{
+                display: flex;
+            }
+            p{
+                max-width: 35%;
+                font-size: 18px;
+            }
+        }
+        /* tv */
+        @media screen and (min-width: 1025px){
+            h1{
+                font-size: 3em
+            }
+            div{
+                width: 25em;
+                height: 25em;
+                background-color:rgb(251, 255, 0);
+            }
+            main{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 1em;
+                margin: 0 auto;
+                width: 80%;
+            }
+            section{
+                display: flex;
+            }
+            p{
+                max-width: 35%;
+                font-size: 30px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Queries</h1>
+    </header>
+    <main>
+        <section>
+            <div></div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+        </section>
+        <section>
+                <div></div>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system..</p>
+        </section>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

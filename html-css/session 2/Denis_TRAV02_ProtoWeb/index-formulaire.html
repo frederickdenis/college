@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <title>index - Formulaires</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulaires</h1>
+            <h2>Éléments variés HTML5 - Frederick Denis</h2>
+        </header>
+        <form action="#">
+            <fieldset>
+                <h4>Contact</h4>
+                <label for="courriel">Courriel :</label>
+                <input type="email" id="courriel" name="courriel" placeholder="Entrez votre courriel" name="courriel" >
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone" name="courriel" >
+                <label for="recherche">Recherche :</label>
+                <input type="search" id="recherche" name="recherche" placeholder="Recherche" name="courriel" >
+            </fieldset>
+            <fieldset>
+                <h4>Combien ?</h4>
+                <div class="flexinline">
+                    <input type="radio" name="devises" id="dollars" value="dollars">
+                    <label for="dollars">Dollars ($)</label>
+                    <input type="radio" name="devises" id="euro" value="euro">
+                    <label for="euro">Euro (€)</label>
+                </div>
+                <label for="choixnombre">Combien ? entre 5 et 20.</label>
+                <input type="number" step="1" min="5" max="20" name="choixnombre" id="choixnombre" >
+                <label for="range">Combien ?</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </fieldset>
+            <fieldset>
+                <h4>Choix de date</h4>
+                <label for="typesemaine">Choisissez une semaine.</label>
+                <input type="week" name="typesemaine">
+                <label for="typedate">Choisissez une date.</label>
+                <input type="date" name="typedate">
+                <label for="typedatelocal">Choisissez une date et heure.</label>
+                <input type="datetime-local" name="bdaytime">
+            </fieldset>
+        </form>
+        <footer>
+            <img src="logo_noir.png" alt="logo" title="Le Barbu Efficace">
+        </footer>
+</body>
+</html>
+<!-- https://www.w3schools.com/tags/att_input_type_date.asp -->
+<!-- https://www.w3schools.com/tags/att_input_type_datetime-local.asp -->

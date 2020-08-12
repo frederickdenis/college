@@ -1,0 +1,64 @@
+body{
+    font-family: 'Trebuchet MS', Arial, Arial, Helvetica, sans-serif;
+}
+main{
+    width: 760px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+header{
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    height: 175px;
+    justify-content: center;
+
+}
+nav{
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-end;
+
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+
+    /* align-items: flex-end; */
+    
+}
+li{
+    display: inline;
+    background-color: #4a4f50;
+
+    padding: 4px 12px;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+section{
+    background-color: #c5c9b1;
+    display: flex;
+    padding: 20px 20px 30px 20px;
+    justify-content: flex-start;
+}
+article{
+    background-color: #fff;
+    margin-left: 20px;
+    height: 350px;
+    font-size: 95%;
+}
+h3 , p{
+    text-align: center;
+
+
+}
+footer{
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+}
+

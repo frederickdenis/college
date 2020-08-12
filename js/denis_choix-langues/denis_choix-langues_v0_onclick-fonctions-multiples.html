@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choix de langues</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Atelier "Choix de Langues"</h1>
+        </header>
+        <div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="images/france.png" alt="Drapeau Français" height="100" width="150">
+                            <figcaption onclick="afficheMsgFr();"><a href="javascript:;">Français</a></figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/gb.png" alt="Drapeau Grande-Bretagne" height="100" width="150">
+                            <figcaption onclick="afficheMsgEn();"><a href="javascript:;">English</a></figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="images/spain.png" alt="Drapeau Espagne" height="100" width="150">
+                            <figcaption onclick="afficheMsgEs();"><a href="javascript:;">Espanol</a></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <footer>
+            <h2>Bienvenue.</h2>
+        </foooter>
+    </main>
+    <script>
+        function afficheMsgFr() {
+            document.querySelector("h2").innerHTML = ("Bienvenue.")
+        } 
+        // afficheMsgFr();
+
+        function afficheMsgEn() {
+            document.querySelector("h2").innerHTML = ("Welcome.")
+        } 
+        // afficheMsgEn();
+
+        function afficheMsgEs() {
+            document.querySelector("h2").innerHTML = ("Bienvenida.")
+        } 
+        // afficheMsgEs();
+    </script>  
+</body>
+</html>

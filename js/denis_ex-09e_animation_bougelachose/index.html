@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Bouge Mario</title>
+    <style>
+        body{
+            background: url(images/background_mario.jpg);
+            color: #fff;
+            font-family: sans-serif;
+        }
+        header{
+            text-align: center;
+            padding: 0.5% 5% 29% 5%;
+            font-size: 3em;
+        }
+        footer{
+            text-align: center;
+            padding: 4% 0 0 1%;
+        }
+        div{
+            width: 100%;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Bouge, Mario !</h1>
+        </header>
+        <div  class="mario">
+            <img src="images/mario.png" alt="mario" title="mario" width="50" height="50">
+        </div>
+        <footer>
+            <p>Frederick Denis | Production de médias interactifs</p>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+        const mario = document.querySelector(".mario");
+        let positionActuelle = 0;
+
+        const requestAnimationFrame = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame||
+            window.msRequestAnimationFrame;
+
+        function bougeMario(){
+            positionActuelle += 4;
+
+            mario.style.left = positionActuelle + "px";
+
+            if(Math.abs(positionActuelle)>= 2000){
+                positionActuelle = -200;
+            }
+
+            requestAnimationFrame(bougeMario);
+        }
+        bougeMario();
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

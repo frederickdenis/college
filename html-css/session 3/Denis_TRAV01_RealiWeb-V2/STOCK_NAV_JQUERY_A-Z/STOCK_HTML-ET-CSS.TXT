@@ -1,0 +1,49 @@
+﻿
+/* Flèche */
+#versLeHaut {
+    display: none;
+    position: fixed;
+    top: 280px;
+    right: 26px;
+    z-index: 100;
+}
+
+/*#versLeHaut li {*/
+#versLeHaut {
+    background: rgba(153, 153, 153, 0.5);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#versLeHaut a:focus {
+    background-color: transparent;
+}
+
+#versLeHaut a:hover {
+    background-color: transparent;
+    color: rgb(47, 132, 199);
+}        
+
+
+
+
+
+
+
+	<!-- Flèche pour le retour vers le haut -->
+        <div id="versLeHaut">
+            <a href="javascript:;" title="Retour en haut"><i class="fa fa-arrow-up fa-4x"></i></a>
+        </div>
+
+        <!-- Entête (Scroll/JQuery) -->
+        <header>
+            <section>
+                <p><i class="fas fa-check-square"></i>&nbsp;Vérifications et tests de compatibilité : EDGE/SF/OP/CH. (<time datetime="2019-06">2019</time>)</p>
+            </section>
+            <h1 class="entete-grand">CSS3 de A à Z</h1>
+        </header>
+
+        <!-- Navigation JQuery -->
+        <nav>
+            <ol class="nav"></ol>
+        </nav>

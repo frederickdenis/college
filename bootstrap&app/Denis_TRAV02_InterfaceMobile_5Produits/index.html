@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       .bd-placeholder-img class="img-thumbnail" {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      #cart{
+        background-color: #fff;
+        border-radius: 5px;
+      }
+      .prix{
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 1.6em;
+      }
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1em 5em;
+        font-size: 1em;
+      }
+      .titreprix{
+        display: flex;
+        justify-content: space-between;
+      }
+      .titreprix > h2, p {
+        text-align: center;
+      }
+      .col-md-4{
+        padding: 1em;
+        /* border: solid 3px #999; */
+        border-radius: 15px;
+      }
+      .inlineflex{
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+      }
+      .jumbotron{
+        padding: 0;
+      }
+      .info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .boutons{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto; 
+      }
+      .liste{
+        cursor: pointer;
+        padding: 0 1em 0 0;
+        color: #999;
+
+
+      }
+      .mosaique{
+        cursor: pointer;
+        color: #999;
+
+      }
+      .btn{
+        font-weight: bold;
+      }
+      .navbar{
+        justify-content: space-between;
+        width: 100%;
+        position: fixed;
+        top: 0;
+      }
+      .panier{
+        display: flex;
+        flex-direction: row;
+        color:#fff;
+        padding: 0 10px 0 0;
+      }
+      .panier > p{
+        margin: 0;
+      }
+      .fa-shopping-cart{
+        color: #fff;
+      }
+      .iconesnav{
+            display: flex;
+            flex-direction: row;
+          }
+
+      /* TOOGLE CLASS STYLES */
+      .grid{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 3fr) );
+        grid-gap: 1em;
+        font-size: 1em;
+      }
+
+
+
+
+      /* MEDIA QUERIES */
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img class="img-thumbnail"-lg {
+          font-size: 3rem;
+        }
+      }
+      @media screen and (min-width:200px) and (max-width:767px){
+          .titrealbum, .btn, .prix{
+            font-size: 1em;
+          }
+          .btn{
+            width: 12em;
+          }
+          .jumbotron{
+            padding: 0;
+            width: 80%;
+            margin: 0 auto;
+          }
+          .inlineflex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5em;
+          }
+          .info{
+            text-align: center;
+            padding: 0;
+            margin: 0;
+          }
+          img{
+            height: 125px;
+            width: 125px;
+          }
+          .grid{
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 2fr) );
+            grid-gap: 1em; 
+          }
+          .navbar{
+            display: flex;
+            justify-content: space-between;
+          }
+        
+          
+      }
+
+      
+    </style>
+
+    <title>Discographie - Metallica</title>
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+        <a class="navbar-brand" href="#">Metallica</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+          </div>
+          <div class="iconesnav">
+              <div class="panier">
+              <p class="quantite"></p>
+              <i class="fas fa-2x fa-shopping-cart"></i>
+            </div>
+            <div class="boutons">
+              <div class="liste">
+                <i class="fas fa-list fa-2x"></i>
+              </div>
+              <div class="mosaique">
+                <i class="fas fa-border-all fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+
+
+<!-- LISTE DES ALBUMS -->
+        <div class="listeitem mt-5">        
+          <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/1_kill-em-all.png" alt="killemall" title="Kill'em All" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Kill'em all</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a> 
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/2_ride-the-lightning.png" alt="2_ride-the-lightning" title="Ride the Lightning" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Ride the Lightning</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/3_master-of-puppets.png" alt="3_master-of-puppets" title="Master of puppets" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Master of puppets</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/4_and-justice-for-all.png" alt="4_and-justice-for-all" title="And Justice for All" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">And justice for all</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/5_metallica.png" alt="metallica" title="Metallica" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Metallica (Black)</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/6_load.png" alt="load" title="Load" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Load</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/7_reload.png" alt="reload" title="Reload" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Reload</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/8_st-anger.png" alt="stanger" title="St-Anger" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">St-Anger</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/9_death-magnetic.png" alt="deathmagnetic" title="Death Magnetic" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Death Magnetic</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <div class="inlineflex">
+            <img class="img-thumbnail" src="images/10_hardwired-to-self-destruct.png" alt="htsd" title="HTSD" height="250px" width="250px">
+            <div class="info">
+              <h3 class="titrealbum">Hardwired</h3>
+              <p class="lead prix">19.99&nbsp;$</p>
+              <a href="javascript:;" class="btn btn-lg btn-primary" role="button">Commander&nbsp;»</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+        
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js" integrity="sha256-xzrHBImM2jn9oDLORlHS1/0ekn1VyypEkV1ALvUx8lU=" crossorigin="anonymous"></script>
+    <script>
+          $(document).ready(function(){
+            $(".mosaique").click(function(){
+              $(".listeitem").addClass("grid");
+              $(".mosaique").css("color", "#000");
+              $(".liste").css("color", "#999");
+              
+              $(".info").css("padding", "2em");
+
+              // console.log("test");
+              });
+              $(".liste").click(function(){
+              $(".listeitem").removeClass("grid");
+              $(".liste").css("color", "#000");
+              $(".mosaique").css("color", "#999");
+              $(".jumbotron").css("width", "100%");
+              // console.log("test");
+              });
+
+            // FONCTION PANIER
+            var count = 0;
+            $(".btn-primary").click(function(){
+              count++;
+              $(".quantite").html(count);
+            })
+          });
+   
+    </script>
+  </body>
+</html>

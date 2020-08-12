@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <title>Travail long 02 - Interactivité de l'interface</title>
+</head>
+<body>
+    <header>
+        <h1>Travail long 02 - Interactivité de l'interface</h1>
+        <h3>Par Frederick Denis</h3>
+    </header>
+    <main>
+        <div class="question">
+            <h2>Exercice 1</h2>
+            <p>Une fonction qui aditionne les 100 valeurs numériques entre 1 et 100.</p>
+            <pre>
+                <samp>
+                    <code>
+    function somme(){
+        let somme= 0;
+
+        for (let i = 1; i <= 100; i++){
+            somme +=i;
+        }
+        document.querySelector("#afficheex1").innerHTML = somme;
+    }
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                    <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex1"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 2</h2>
+            <p>Une fonction en boucle qui alerte une fois la boucle faite 10 fois</p>
+            <pre>
+                <samp>
+                    <code>
+    function alerteIterations(){
+        for(let i = 0; i < 10; i ++){
+            if (i == 9){
+                console.log("Dernière itération - Boucle finie");
+                document.querySelector("#afficheex2").innerHTML =
+                "Dernière itération - Boucle finie"
+            }
+        }
+    }
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex2"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 3</h2>
+            <p>Une fonction qui retourne 6 nombres entre 1 et 49 au hasard</p>
+            <pre>
+                <samp>
+                    <code>
+    function auHazard(min,max){
+        let randomNum = Math.round ( Math.random()*(max-min)) + min;
+        return randomNum;
+    }
+        let chaineNbres= "";
+        //Boucle 6 itérations.
+
+        for (let i = 0; i < 6; i += 1) {
+            chaineNbres = chaineNbres + auHazard (1, 49) + ", ";
+        }
+        document.querySelector("#afficheex3").innerHTML = "Les numéros sont: "
+        + chaineNbres;
+        
+    auHazard();
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex3"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 4</h2>
+            <p>Une fontion en boucle qui fait le compte à rebours de 10 à 1</p>
+            <pre>
+                <samp>
+                    <code>
+    function compteARebours(){
+        for (let i = 10; i >= 0; i--){
+            if (i == 0){
+                console.log("Dernière itération - Décollage");
+            }
+        }
+    }
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex4"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 5</h2>
+            <p>Une fonction qui calcule le carré d'un nombre</p>
+            <pre>
+                <samp>
+                    <code>
+    function calculDuCarre(deCombien){
+        let carre = 1;
+        let chaineCalcul = ``;
+
+        for (let i = 1; 1 <= deCombien; 1 += 1){
+            carre = i * i;
+
+            chaineCalcul =+ `Le carré de ${i} est ${carre}&ltbr&gt`;
+        }
+        document.querySelector("#afficheex5").innerHTML = chaineCalcul;
+    }
+    calculDuCarre(12);
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex5"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 6</h2>
+            <p>Une fonction triant les noms entrés dans un tableau de 0 à 4.</p>
+            <pre>
+                <samp>
+                    <code>
+    const prenoms = ["Claude", "Jacques", "Isabelle", "Marc", "Prune"];
+
+    function affichePrenomsFormatesol(){
+
+        let chaineDesPrenoms = `&ltol&gt`;
+
+        for (let i = 0; i < prenoms.length; i += 1){
+            let prenom = prenoms [i];
+
+            chaineDesPrenoms += `&ltli&gt ${prenom} &ltsmall&gt(${i})&lt/small$g&lt/li&gt`;
+        }
+        chaineDesPrenoms =+ `&lt/ol&gt`
+        document.querySelector("#afficheex6").innerHTML = chaineDesPrenoms;
+        }
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex6"></p>
+        </div>
+        <div class="question">
+            <h2>Exercice 7</h2>
+            <p>Une fonction qui affiche la table des multiplications</p>
+            <pre>
+                <samp>
+                    <code>
+    function genereTableau(deCombien){
+
+        let chaineDesNombres = `&lttable&gt`;
+
+        for (i = 1; i <= deCombien; i++) {
+            chaineDesNombres += `&lttr&gt`;
+            for (j = 1; j <= deCombien; j++) {
+                if ((i == 1) || (j == 1)) {
+                    chaineDesNombres += `&ltth&gt`;
+                } else {
+                    chaineDesNombres += `&lttd&gt`;
+                }
+                chaineDesNombres += `${i * j} &lt/td&gt`;
+            }
+            chaineDesNombres += `&lt/tr&gt`;
+        }
+
+        chaineDesNombres += `&lt/table&gt`;
+        
+        document.querySelector("#afficheex7").innerHTML = chaineDesNombres;
+    }
+                    </code>
+                </samp>
+            </pre>
+            <header>
+                <h4>Résultat:</h4>
+            </header>
+            <p id="afficheex7"></p>
+        </div>
+    </main>
+    <footer></footer>
+<script>
+    
+    //EXEMPLE 1
+
+    function somme(){
+        let somme= 0;
+
+        for (let i = 1; i <= 100; i++){
+            somme +=i;
+        }
+        document.querySelector("#afficheex1").innerHTML = somme;
+        console.log(somme);
+    }
+    somme();
+    
+
+    //EXEMPLE 2
+
+    function alerteIterations(){
+        for(let i = 0; i < 10; i ++){
+            if (i == 9){
+                console.log("Dernière itération - Boucle finie");
+                document.querySelector("#afficheex2").innerHTML = "Dernière itération - Boucle finie"
+            }
+        }
+    }
+    alerteIterations();
+    
+
+    //EXEMPLE 3
+
+    function auHazard(min,max){
+        let randomNum = Math.round ( Math.random()*(max-min)) + min;
+        return randomNum;
+    }
+    let chaineNbres= "";
+    //Boucle 6 itérations.
+
+    for (let i = 0; i < 6; i += 1) {
+        chaineNbres = chaineNbres + auHazard (1, 49) + ", ";
+    }
+    document.querySelector("#afficheex3").innerHTML = "Les numéros sont: " + chaineNbres;
+    auHazard();
+
+    //EXEMPLE 4
+
+    function compteARebours(){
+        for (let i = 10; i >= 0; i--){
+            if (i == 0){
+                console.log("Dernière itération - Décollage");
+                document.querySelector("#afficheex4").innerHTML = "Dernière itération - Décollage"
+            }
+        }
+    }
+    compteARebours();
+    //EXEMPLE 5
+    function calculDuCarre(deCombien){
+        let carre = 0;
+        let chaineCalcul = ``;
+
+        for (let i = 1; i <= deCombien; i += 1){
+            carre = i * i;
+
+            chaineCalcul += `Le carré de ${i} est ${carre}<br>`;
+        }
+        document.querySelector("#afficheex5").innerHTML = chaineCalcul;
+    }
+    calculDuCarre(12);
+
+    //EXEMPLE 6
+
+    const prenoms = ["Claude", "Jacques", "Isabelle", "Marc", "Prune"];
+
+    function affichePrenomsFormatesol(){
+
+        let chaineDesPrenoms = `<ol>`;
+
+        for (let i = 0; i < prenoms.length; i += 1){
+            let prenom = prenoms [i];
+
+            chaineDesPrenoms += `<li> ${prenom} <small>(${i})</small></li>`;
+        }
+        chaineDesPrenoms += `</ol>`
+        document.querySelector("#afficheex6").innerHTML = chaineDesPrenoms;
+    }
+    affichePrenomsFormatesol();
+
+    //EXEMPLE 7`
+
+
+      function genereTableau(deCombien){
+
+          let chaineDesNombres = `<table>`;
+
+          for (i = 1; i <= deCombien; i++) {
+              chaineDesNombres += `<tr>`;
+              for (j = 1; j <= deCombien; j++) {
+                  if ((i == 1) || (j == 1)) {
+                      chaineDesNombres += `<th>`;
+                  } else {
+                      chaineDesNombres += `<td>`;
+                  }
+                  chaineDesNombres += `${i * j} </td>`;
+              }
+              chaineDesNombres += `</tr>`;
+          }
+
+          chaineDesNombres += `</table>`;
+          
+          document.querySelector("#afficheex7").innerHTML = chaineDesNombres;
+      }
+      genereTableau(10);
+</script>
+</body>
+</html>

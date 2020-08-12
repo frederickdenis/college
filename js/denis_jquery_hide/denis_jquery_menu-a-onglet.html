@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Hide & Show</title>
+</head>
+<body>
+    <main>
+        <header class="titre1">
+            <h1>Show & Hide JQuery</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div id="paragraphes">
+            <section id="para1">    
+                <h4 class="titre">Paragraphe 1</h4>
+                <p class="texte">Bacon ipsum dolor amet shankle picanha kevin burgdoggen porchetta turducken tongue andouille, tri-tip strip steak brisket bresaola t-bone turkey. Ribeye alcatra capicola, beef frankfurter corned beef ham hock pastrami ball tip salami t-bone prosciutto short ribs biltong pig. Salami chuck hamburger tongue pork loin short ribs. Jerky short ribs swine tenderloin buffalo, filet mignon picanha meatloaf t-bone. Pastrami andouille ground round drumstick prosciutto.</p>
+            </section>
+            <section id="para2">
+                <h4 class="titre">Paragraphe 2</h4>
+                <p class="texte">Bacon ipsum dolor amet shankle picanha kevin burgdoggen porchetta turducken tongue andouille, tri-tip strip steak brisket bresaola t-bone turkey. Ribeye alcatra capicola, beef frankfurter corned beef ham hock pastrami ball tip salami t-bone prosciutto short ribs biltong pig. Salami chuck hamburger tongue pork loin short ribs. Jerky short ribs swine tenderloin buffalo, filet mignon picanha meatloaf t-bone. Pastrami andouille ground round drumstick prosciutto.</p>
+            </section>
+            <section id="para3">
+                <h4 class="titre">Paragraphe 3</h4>
+                <p class="texte">Bacon ipsum dolor amet shankle picanha kevin burgdoggen porchetta turducken tongue andouille, tri-tip strip steak brisket bresaola t-bone turkey. Ribeye alcatra capicola, beef frankfurter corned beef ham hock pastrami ball tip salami t-bone prosciutto short ribs biltong pig. Salami chuck hamburger tongue pork loin short ribs. Jerky short ribs swine tenderloin buffalo, filet mignon picanha meatloaf t-bone. Pastrami andouille ground round drumstick prosciutto.</p>
+            </section>    
+        </div>
+        <div class="bouton">
+            <p>Cliquez ici</p>
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+        
+        $( document ).ready(function() {
+
+            function disparitionDesElements(){
+                
+                $(".bouton").on("click", function(){    
+                        $(".titre, .texte").show();
+                        $("header").toggleClass("titre2");
+                        console.log("cliqué");
+                    });
+
+
+                $(".titre, .texte").on("click", function(){ 
+                    $(this).hide();
+                    console.log("disparu");
+                }
+                )
+            }
+            disparitionDesElements();
+        });
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+    </script>
+</body>
+</html>

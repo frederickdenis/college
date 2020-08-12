@@ -1,0 +1,32 @@
+body{
+    font-family: "Open-Sans", sans-serif;
+    background-color: #231F20;
+}
+main{
+     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    font-family: "Arvo", serif;
+    text-align: center;
+    background-color: #000;
+    padding: 0 25px 0 25px;
+    border-radius: 25px;
+}
+h1, h3{
+    font-weight: lighter;
+}
+footer{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+}
+p{
+    text-align: center;
+    padding: 20px;
+    background-color:#000;
+    border-radius: 40px; 
+}

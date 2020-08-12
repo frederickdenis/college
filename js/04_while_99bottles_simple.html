@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>    
+    <meta charset="utf-8">
+    <title>99 Bottles of Beer</title>
+      
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900">
+    
+    <style>
+        body {
+            background-color: #242424;
+            color: #fff;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.2em;
+            margin: 0;
+        }
+          
+        header {
+            background-color: #8b2107;
+            height: 130px;
+        }
+        
+        h1 {
+            font-weight: 300;
+        }
+        
+        h1 > span {
+            font-size: 2.2em;
+            font-weight: 500;
+        }
+        
+        header, #bottles {
+            margin: 0 auto;
+            padding: 20px;
+            width: 500px;
+        }
+        
+        #bottles {
+            background-color: #333;
+            font-weight: 200;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><span>99</span> Bottles of Beer</h1>
+    </header>
+    
+    <div id="bottles"></div>
+
+    <script>
+      
+        // Fonction utilitaire raccourci.
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        // Fonction de la construction de la chanson avec une boucle while.
+        function afficheLyrics() {
+
+            const bottles = 99;
+            let lyrics = "";
+            const pluriel = "s";
+
+
+            while (bottles > 0) {
+                lyrics = lyrics + bottles + " bottle" + pluriel + " of beer on the wall <br>";
+                lyrics = lyrics + bottles + " bottle" + pluriel + " of beer <br>";
+                lyrics = lyrics + " take one down, pass it around, <br>";
+
+                bottles = bottles - 1;
+
+                if (bottles == 1) {
+                    pluriel = "";
+                }
+
+                if (bottles > 0) {
+                    lyrics = lyrics + bottles + " bottle" + pluriel + " of beer on the wall <br><br>";
+                } else {
+                    lyrics = lyrics + "<br>No more bottles of beer on the wall.";
+                }
+            } //fin du while.
+
+            //affichage de la chanson dans le div html.
+            $("bottles").innerHTML = lyrics;
+
+        } //fin de afficheLyrics.
+
+        
+        //on exécute la fonction afficheLyrics.
+        afficheLyrics();
+      
+    </script>
+</body>
+
+</html>

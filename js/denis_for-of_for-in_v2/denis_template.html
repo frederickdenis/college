@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <title>Template</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Boucles for(in) et for(of)</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div>
+            <pre>
+                <samp>
+                    <code>
+function bioActeurForOf(){
+
+    const acteur = ["Chuck", "Norris", "'77"];
+
+    for (let item of acteur){
+        document.querySelector("#sectionaffichageforof").innerHTML += item +" ";
+    }
+}
+                    </code>
+                </samp>
+            </pre>
+        </div>
+                <div id="bouton1" class="bouton">
+            <p>For (of) en action !</p>
+        </div>
+        <div id="sectionaffichageforof">
+        </div>
+        <div>
+            <pre>
+                <samp>
+                    <code>
+function bioActeurForIn(){
+
+    const acteur = {prenom:"Chuck", nom:"Norris", age:77};
+
+    for (let prop in acteur){
+        document.querySelector("#sectionaffichageforin").innerHTML += acteur[prop];
+    }
+
+} 
+                    </code>
+                </samp>
+            </pre>
+        </div>
+        <div id="bouton2" class="bouton">
+            <p>For (in) en action !</p>        
+        </div>
+        <div id="sectionaffichageforin">
+
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+        function bioActeurForOf(){
+            const acteur = ["Chuck", "Norris", "'77"];
+
+            for (let item of acteur){
+                document.querySelector("#sectionaffichageforof").innerHTML += item +" ";
+            }
+        }
+        function bioActeurForIn(){
+            const acteur = {prenom:"Chuck", nom:"Norris", age:77};
+
+            for (let prop in acteur){
+                document.querySelector("#sectionaffichageforin").innerHTML += acteur[prop];
+            }
+
+        }
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+        function gestionnaireEvenement(){
+            document.querySelector("#bouton1").addEventListener("click", function(e){
+                bioActeurForOf();
+            })
+            document.querySelector("#bouton2").addEventListener("click", function(e){
+                bioActeurForIn();
+            })
+        }
+        gestionnaireEvenement();
+    </script>
+</body>
+</html>

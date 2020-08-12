@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>TL-01 / PIIA</title>
+    <style>
+        body{
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 1.2em;
+            background-color: #000;
+        }
+        main{
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(59, 59, 59);
+        }
+        header{
+            text-align: center;
+            background-color:#000;
+            width: 100%;
+            padding: 3%; 
+        }
+        h1{
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        h3{
+            font-family: "Open Sans Condensed", sans-serif;
+            margin:0;
+        }
+        #contenu{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        div{
+            margin: 20px auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+
+        }
+        footer{
+            color: #fff;
+            background: url(images/logo-blanc.png) no-repeat;
+            background-size: 5em;
+            background-position: center;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+        }
+        input{
+            width: 500px;
+            border: 3px solid rgb(144, 144, 144);
+            box-shadow: 0 0 5px 5px rgb(190, 190, 190);
+            padding: 5px;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+
+       div{
+            text-align: center;
+            padding: 0;
+        }
+        footer > p{
+            border-top: 2px solid #fff;
+            text-align: center;
+            font-size: .7em;
+            padding: 1%;
+        }
+        div#cc1 {
+        width: 600px;
+        height: 200px;
+        }
+
+        div#cc2,
+        div#cc3,
+        div#cc4,
+        div#cc5,
+        div#cc6,
+        div#cc7 {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 60px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Travail long 01 - Production d'interfaces interactives animées</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div id="contenu">
+            <!-- CHARGEMENT -->
+            <div>
+                <!-- 540 jours totaux (2 oct 18 a 25 mars 20), 267 jours restants -->
+                <canvas id="cvs1" width="300" height="300"></canvas>
+                <p>Pourcentage du cours de complété en date du <time datetime="2018-06-26">26 juin 2019</time></p>
+            </div>
+
+            <!-- GRAPHIQUE SVG ANIMÉ-->
+            <div style="width: 550px; height: 250px" id="cvs2"></div>
+
+            <!-- Simple SVG -->
+            <div style="width: 550px; height: 250px" id="cvs3"></div>
+
+            <!-- EMPLOYEES SALES LINE -->
+            <div>
+                <canvas id="cvs4" width="675" height="450"></canvas>
+            </div>
+
+            <!-- Google CHARTS meter -->
+            <canvas id="cvs5" width="600" height="300" style="border-radius: 15px"></canvas>
+            <!-- ASK PUBLIC -->
+            
+            <div>
+                    <!-- https://www.electionsquebec.qc.ca/provinciales/fr/resultats_2018.php -->
+                <p>Résultat des élections générales au Québec</p>
+                <canvas id="cvs6" width="400" height="250" style="border-radius: 6px; background-image: linear-gradient(45deg, rgb(19, 2, 255), rgb(0, 0, 0), rgb(19, 2, 255)); box-shadow: #aaa 10px 10px 10px"></canvas>
+            </div>
+            <!-- https://www.electionsquebec.qc.ca/provinciales/fr/resultats_2018.php -->
+            <!--  -->
+            <!-- GRAPHIQUE SVG -->
+            
+        </div>
+    </main>
+        <footer>
+            <p>Production de médias interactifs |  <time datetime="2018-07-01">Juillet 2019</time></p>
+        </footer>
+    <!-- CHARGEMENT -->
+    <script src="libraries/RGraph.common.core.js"></script>
+    <script src="libraries/RGraph.drawing.text.js"></script>
+    <script src="libraries/RGraph.pie.js"></script>
+    <script src="libraries/RGraph.bar.js"></script>
+    <script src="libraries/RGraph.line.js"></script>
+    <script src="libraries/RGraph.drawing.yaxis.js"></script>
+    <script src="libraries/RGraph.common.dynamic.js"></script>
+    <script src="libraries/RGraph.common.key.js"></script>
+    <script src="libraries/RGraph.svg.line.js"></script>
+    <script src="libraries/RGraph.meter.js"></script>
+    <script src="libraries/RGraph.svg.common.core.js"></script>
+    <script src="libraries/RGraph.svg.common.key.js"></script>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+        // GRAPHIQUE1
+        function afficheGraphique1(quelCanvas){
+            
+            var pie = new RGraph.Pie({
+            id: quelCanvas,
+            data: [v = 49.4,100 - v],
+            options: {
+                variant: 'donut',
+                variantDonutWidth: 50,
+                colors: ['red', 'white'],
+                colorsStroke: 'transparent',
+                shadow: false
+                }
+            }).roundRobin({frames: 60}).on('draw', function (obj)
+            {
+                var width = 5;
+
+                for (var i=0; i<360; i+=10) {
+                    RGraph.path2(
+                        obj.context,
+                        'b a % % % % % false l % % c f black',
+                        obj.centerx,
+                        obj.centery,
+                        obj.radius + 2,
+                        RGraph.degrees2Radians(i - (width / 2)),
+                        RGraph.degrees2Radians(i + (width / 2)),
+                        obj.centerx,
+                        obj.centery
+                    );
+                }
+
+                if (text) {
+                    text.text = parseInt(v * obj.get('effect.roundrobin.multiplier')) + '%';
+                }
+            });
+
+
+
+            var text = new RGraph.Drawing.Text({
+                id: 'cvs1',
+                x: pie.centerx,
+                y: pie.centery,
+                text: pie.data[0] + '%',
+                options: {
+                    font: 'Arial',
+                    size: 64,
+                    halign: 'center',
+                    'valign': 'center',
+                    colors: ['#aaa']
+                }
+            }).draw();
+        }
+
+
+        // HORIZONTAL AND NEGATIVE MARGIN
+        function afficheGraphique2(quelCanvas){
+            new RGraph.SVG.Line({
+                id: quelCanvas,
+                data: [
+                    [84,65,3,15,12,22,95,5,35,45,85,85,23,45,62,52,45,31,53,66],
+                    [64,12,56,25,20,80,85,61,81,56,45,32,91,52,86,23,45,56,51,48],
+                    [48,5,23,12,16,36,49,130,52,95,45,21,65,35,28,75,59,74,86,23],
+                    [95,65,32,12,100,8,152,63,52,54,85,45,12,13,15,32,64,84,54,66]
+                ],
+                options: {
+                    filled: true,
+                    filledAccumulative: true,
+                    colors: [
+                        'rgba(0,0,0,0)',
+                        '#FDA354',
+                        '#C4D6ED',
+                        '#609EC8'
+                    ],
+                    spline: true,
+                    backgroundGridVlines: false,
+                    backgroundGridBorder: false,
+                    xaxis: false,
+                    yaxis: false,
+                    textSize: 10,
+                    xaxisLabels: ['01','02','03','04','05','06','07','08','09','10']
+                }
+            }).trace();
+        }
+
+            // SVG simple
+            function afficheGraphique3(quelCanvas){ 
+                data = [500,600,800,720,900,1100];
+
+                line = new RGraph.SVG.Line({
+                    id: quelCanvas,
+                    data: data,
+                    options: {
+                        colors: ['#fff'],
+                        linewidth: 5,
+                        backgroundGrid: false,
+                        xaxisLabels: ['Jan','Fev','Mar','Avr','Mai','Jun'],
+                        backgroundGridColor: '#999',
+                        marginInner: 5,
+                        tickmarksStyle: 'circle',
+                        tickmarksSize: 5,
+                        textSize: 16,
+                        marginLeft: 75
+                    }
+                }).draw();
+
+                label = RGraph.SVG.numberFormat({
+                    num: line.data[0][line.data[0].length - 1],
+                    thousand: ','
+                });
+
+                // Add the label above the last point
+                RGraph.SVG.text({
+                    object: line,
+                    x:      line.coords[line.coords.length - 1].x,
+                    y:      line.coords[line.coords.length - 1].y - 25,
+                    text:   label,
+                    valign: 'bottom',
+                    halign: 'center',
+                    size:   20,
+                    bold:   true
+                });
+            }
+
+        // EMPLOYEES SALES LINE
+        function afficheGraphique4(quelCanvas){ 
+            new RGraph.Line({
+                id: quelCanvas,
+                data: [
+                    [190,165,47,121,30,72],
+                    [12,180,10,80,25,75],
+                    [42,80,93,25,21,120],
+                    [2,42,27,47,43,50]
+                ],
+                options: {
+                    shadow: false,
+                    tickmarksStyle: null,
+                    linewidth: 7,
+                    backgroundGridVlines: false,
+                    backgroundGridColor: 'gray',
+                    colorsBackground: '#222',
+                    axes: false,
+                    textColor: '#A7A5A6',
+                    textSize: 10,
+                    textAccessible: false,
+                    title: '',
+                    titleColor: 'white',
+                    titleSize: 24,
+                    xaxisLabels: ['Nourrite','Auto','Maisonnée','Meubles','Cuisine','Bain'],
+                    marginLeft: 50,
+                    marginRight: 50,
+                    marginTop: 75,
+                    marginBottom: 60,
+                    key: ['Pierre','Jean','Jacques','Jules'],
+                    keyPosition: 'margin',
+                    keyLabelsSize: 14,
+                    keyLabelsColor: 'rgb(248,248,248)',
+                    keyPositionY: 425,
+                    colors: ['#B8202C','#96D1E3','#FA8710','#62648D']
+                }
+            }).on('beforedraw', function (obj)
+            {
+                RGraph.clear(obj.canvas, '#555557');
+            }).trace();
+        }
+        // meter google charts
+        function afficheGraphique5(quelCanvas){
+            new RGraph.Meter({
+            id: quelCanvas,
+            min: 0,
+            max: 100,
+            value: 50,
+            options: {
+                centerpinStroke: 'rgba(0,0,0,0)',
+                centerpinFill: 'rgba(0,0,0,0)',
+                colorsRanges: [
+                    [0,10,'#ff9'],
+                    [10,20,'#ff0'],
+                    [20,30,'#fd0'],
+                    [30,40,'#fc0'],
+                    [40,50,'#fa0'],
+                    [50,60,'#f80'],
+                    [60,70,'#f60'],
+                    [70,80,'#f50'],
+                    [80,90,'#f30'],
+                    [90,100,'#f20'],
+                ],
+                labelsCount: 0,
+                anglesStart: RGraph.PI + 0.5,
+                anglesEnd: RGraph.TWOPI - 0.5,
+                linewidthSegments: 0,
+                textSize: 16,
+                colorsStroke: 'black',
+                segmentsRadiusStart: 150,
+                needleRadius: 170,
+                border: 0,
+                tickmarksSmallCount: 0,
+                tickmarksLargeCount: 0,
+                adjustable: true
+            }
+            }).draw();
+        }
+    // DEMANDER AU PUBLIC
+        function afficheGraphique6(quelCanvas){ 
+            labels = [37,25,17,16];
+            data   = RGraph.arrayClone(labels);
+
+            bar = new RGraph.Bar({
+                id: quelCanvas,
+                data: data,
+                options: {
+                    backgroundGridAlign: false,
+                    backgroundGridVlinesCount: 8,
+                    backgroundGridHlinesCount: 10,
+                    backgroundGridColor: '#6A93CA',
+                    backgroundGridLinewidth: 2,
+                    colors:['Gradient(#999:#ffffff:#999)'],
+                    yaxisScaleMax: 100,
+                    marginLeft: 10,
+                    marginRight: 10,
+                    marginTop: 30,
+                    marginBottom: 45,
+                    yaxisLabels: false,
+                    xaxisLabels: ['CAQ','PLQ','PQ','QS'],
+                    xaxisLabelsColor: 'white',
+                    axes: false,
+                    textSize: 22,
+                    textColor: 'rgba(0,0,0,0)',
+                    textFont: 'Verdana',
+                    colorsStroke: 'rgba(0,0,0,0)'
+                }                
+            }).grow().on('draw', function ()
+            {
+                // Add the labels
+                for (var i=0; i<4; i++) {
+                    RGraph.text2(bar.context, {
+                        text: labels[i] + '%',
+                        x:bar.coords[i][0] + (bar.coords[i][2] / 2),
+                        y:30,
+                        color: 'white',
+                        size: 18,
+                        halign: 'center',
+                        font: 'Verdana'
+                    });
+                }
+            });
+        }
+
+
+// APPEL DES FONCTIONS PARAMÉTRÉES
+
+        window.onload = function(){
+
+            afficheGraphique1("cvs1");
+            afficheGraphique2("cvs2");
+            afficheGraphique3("cvs3");
+            afficheGraphique4("cvs4");
+            afficheGraphique5("cvs5");
+            afficheGraphique6("cvs6");
+        }
+        
+
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

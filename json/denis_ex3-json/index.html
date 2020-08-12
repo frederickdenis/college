@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- STYLE BOOTSTRAP COMPILÉ (NPM INSTALL, MODIFIER, NPM RUN CSS/JS POUR RECOMPILER) -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+    <style>
+      .gras{
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <title>JSON - Pratique 3</title>
+  </head>
+  <body>
+    <div class="d-flex justify-content-center">
+      <p class="mon-ex text-left pt-5"></p>
+    </div>
+      <!-- LIBRAIRIES LOCALES (CTRL-C/V CDN DANS URL, SAVE AS ET DEPOSER DANS LE DOSSIER DIST) -->
+  <script src="dist/js/jquery.slim.min.js"></script>
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+
+    var mesEmployesJSON = [
+      {
+        "prenom" : "Chuck",
+        "nom" : "Norris",
+        "genre" : "masculin",
+        "salaire" : 1500000
+      },
+      {
+        "prenom" : "Gena",
+        "nom" : "O'Kelley",
+        "genre" : "feminin",
+        "salaire" : 1500000
+      },
+      {
+        "prenom" : "Mike",
+        "nom" : "Norris",
+        "genre" : "masculin",
+        "salaire" : 950200
+      }
+    ];
+
+
+
+    // function informationSurLesSalaires() {
+      
+
+    //   document.querySelector(".mon-ex").innerHTML = `${mesEmployesJSON[1].nom}`;
+
+    // }
+
+    // informationSurLesSalaires();
+
+    function extraitTout(){
+      
+      for (var i = 0; i < mesEmployesJSON.length; i++) {
+
+        console.log (mesEmployesJSON[i]);
+
+        var employeTotal = mesEmployesJSON[i];
+        
+        for (var prop in employeTotal){
+         
+          var value = employeTotal[prop];
+
+          document.querySelector(".mon-ex").innerHTML += `<span class="gras">${prop}</span> : <span class="valeur">${value}</span><br>`;
+        }
+      }
+    }
+    extraitTout();
+    
+    // console.log("Le nom de famille de Gena est " + `${mesEmployesJSON[1].nom}`);
+    // console.log (`${mesEmployesJSON[2].prenom}` + " " + `${mesEmployesJSON[2].nom}` + " gagne un salaire de " + `${mesEmployesJSON[2].salaire}` + "$ par année.");
+    // console.log (`${mesEmployesJSON[1].salaire + mesEmployesJSON[2].salaire}`);
+
+    // document.querySelector(".mon-ex").innerHTML = `<p class='text-align-center'>Le total des salaires de mes employés est de ${mesEmployesJSON[0].salaire} ${mesEmployesJSON[1].salaire} ${mesEmployesJSON[2].salaire} + par années.</p>`;
+
+  </script>
+  </body>
+</html>

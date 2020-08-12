@@ -1,0 +1,59 @@
+{
+  "nomVille": "New York",
+  "coordonnees": [40.6108, -73.9407],
+  "fuseau": "UTC-5",
+  "fondation": "1624",
+  "surnom": "The Big Apple",
+  "hotelDeVille": {
+    "telephone1": "311",
+    "telephone2": "212-NEW-YORK (extérieur NYC)",
+    "texto": "311-692",
+    "rueAdresse": "260 Broadway",
+    "etat": "NY",
+    "codePostal": 10007
+  },
+  "arrondissements": [
+    {
+        "nom": "Manhattan",
+        "population": "1 664 727"
+    },
+    {
+        "nom": "Brooklyn",
+        "population": "2 582 830"
+    },
+    {
+        "nom": "Queens",
+        "population": "2 278 906"
+    },
+    {
+        "nom": "Bronx",
+        "population": "1 432 132"
+    },
+    {
+        "nom": "Staten Island",
+        "population": "479 458"
+    }
+  ],
+  "activites": [
+    {
+        "titre": "Statue de la Liberté",
+        "description": "Icône américaine du port de New York",
+        "": ""
+    },
+    {
+        "titre": "Central Park",
+        "description": "Attraction pour enfants dans le parc",
+        "": ""
+    },
+    {
+        "titre": "Times Square",
+        "description": "Lumières vives et spectacles de Broadway",
+        "": ""
+    },
+    {
+        "titre": "Empire State Building",
+        "description": "Monument de 103 étages",
+        "": ""
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+/*  Feuille de styles Abobe 
+    Optimisé v.0.1 | Version XHTML | XM.
+*/
+body, html {
+	background-color:#fff;
+	color:#363636;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+/*	font-size: 100%;*/
+    margin:0;
+	padding:0;
+}
+#wrapper {
+	margin:0 auto;
+	position:relative;
+/*	padding-left: 20px;*/
+    width:760px;
+}
+#header {
+	position:absolute;
+	top:35px;
+	left:20px;
+	width:720px;
+	height:175px;
+	z-index:1;
+}
+#nav {
+/*	width:535px;*/
+	font-size:90%;
+/*	font-weight: bold;*/
+    left:100px;
+    margin:0;
+	padding:0;
+    position:absolute;
+    top:200px;
+	z-index:2;
+}
+#nav li {
+    /*	display:inline;*/
+    float:left;
+    list-style-type:none;
+}
+
+/* style the links in the nav list */
+#nav a {
+    color:#fff;
+	display:block;      /* Change légèrement le margin-top */
+/*	margin: 0;*/
+	padding:4px 12px;
+	text-decoration: none;
+/*	font-weight: bold;*/
+}
+#nav a:link, #nav a:visited {
+	background-color:#4a4f50;
+/*	color: #575757;*/
+	border-bottom:#7b6a61 solid 2px;
+    border-left:#f2ddd2 solid 2px;
+	border-right:#7b6a61 solid 2px;
+    border-top:#f2ddd2 solid 2px;
+}
+#nav a:focus, #nav a:hover, #nav a:active {
+	background-color:#ebeAb8;
+	border-bottom:#989777 solid 2px;
+    border-left:#f2f2d2 solid 2px;
+    border-right:#989777 solid 2px;
+	border-top:#f2f2d2 solid 2px;
+    color:#575757;
+}
+
+/* special style for link to identify current page */
+#thispage a:link, #thispage a:visited, #thispage a:focus, #thispage a:hover, #thispage a:active {
+	background-color:#f0efca;
+	border-bottom:#f6f5de solid 2px;
+    border-left:#9f9f8a solid 2px;
+	border-right:#f6f5de solid 2px;
+    border-top:#9f9f8a solid 2px;
+    color:#575757;
+    text-decoration:none;
+}

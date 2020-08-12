@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- STYLE BOOTSTRAP COMPILÉ (NPM INSTALL, MODIFIER, NPM RUN CSS/JS POUR RECOMPILER) -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+    <style>
+
+      /* STYLE ICI */
+      .fa-question:hover{
+        color: #535353;
+        cursor: pointer;
+      }
+
+      h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+      }
+    </style>
+
+    <title>Gavel - Prototype</title>
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-surmesure">
+          <a class="navbar-brand" href="#">GAVEL</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Autre</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        
+        <!-- CONTENU -->
+
+        <!-- Identification -->
+
+
+        <div class="container-fluid">
+          <div class="row pt-5">
+            <div class="accordion col" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-black" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Identification
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <input class="form-control form-control-sm" type="text" placeholder="Demandeur / acheteur" aria-label="Identification du demandeur ou de l'acheteur">
+                    <input class="form-control form-control-sm mt-5" type="text" placeholder="Défendeur / vendeur" aria-label="Identification du défendeur ou du vendeur">
+                    <input class="form-control form-control-sm mt-5" type="text" placeholder="Tierce partie / témoin" aria-label="Identification du témoin si nécéssaire">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- FORMULAIRE -->
+
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-black collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Formulaire
+                    </button>
+                  </h2>
+                </div>
+
+                <!-- RECEVEUR -->
+
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                      <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Raisons / préambule" aria-label="Préambule ou raisons de l'entente"></textarea>
+                      </div>
+                    <h4>Parti recevant le montant</h4>
+                    <div class="row d-flex justify-content-around pt-3 pb-4">
+                      <button class="primary" aria-label="Parti recevant le montant - Demandeur">Demandeur</button>
+                      <button class="primary" aria-label="Parti recevant le montant - Défendeur">Défendeur</button>
+                    </div>
+                    <input class="form-control form-control-sm mb-5" type="text" placeholder="Montant total de l'entente" aria-label="Entrez le montant total de l'entente">
+
+                    <!-- MODALITÉS -->
+                    
+                    <h4 class="pb-5">Modalités de paiement</h4>
+
+                    <!-- MONTANT DES VERSEMENTS -->
+
+
+                    <div class="form-group row">
+                      <label for="montantversements" class="col-6 col-form-label">Montant des versements</label>
+                      <div class="col-6">
+                        <div class="elementsformulaire d-flex justify-content-center">
+                          <input class="form-control col-10" type="text" id="montantversements" placeholder="Montant" aria-label="Montant des versements par ittération">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#modalmontant" aria-label="Aide">
+                            <i class="fa fa-question fa-xs reponse1"></i>
+                          </button>
+                        </div> 
+                      </div>
+                    </div>
+
+                    <!-- PREMIER VERSEMENTS -->
+
+                    <div class="form-group row">
+                      <label for="dateversements" class="col-6 col-form-label"> Date - Premier versement </label>
+                      <div class="col-6">
+                        <div class="elementsformulaire d-flex justify-content-center">
+                          <input class="form-control col-10" type="datetime-local" value="aucune" id="example-datetime-local-input" aria-label="Date du premier versement">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#modaldate" aria-label="Aide">
+                              <i class="fa fa-question fa-xs reponse1"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- DATE -->
+
+
+                    <div class="form-group row">
+                      <label for="frequenceversements" class="col-6 col-form-label">Fréquence</label>
+                      <div class="col-6">
+                        <div class="elementsformulaire d-flex justify-content-center">
+                          <select class="form-control col-10" id="frequenceversements" aria-label="Fréquence des versements">
+                            <option>Entrez une option</option>
+                            <option>Quotidien</option>
+                            <option>Hebdomadaire</option>
+                            <option>Bi-hebdomadaire</option>
+                            <option>Mensuel</option>
+                            <option>Annuel</option>
+                          </select>
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#modalfrequence" aria-label="Aide">
+                              <i class="fa fa-question fa-xs reponse1"></i>
+                          </button> 
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- ENREGISTREMENT -->
+
+
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-black collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Enregistrement
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-success btn-lg btn-block"><i class="fas fa-camera"></i> Enregistrement</button>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- ENVOI -->
+
+
+              <div class="card">
+                <div class="card-header" id="headingfour">
+                  <h2 class="mb-0">
+                    <button class="btn btn-black collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Envoi
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-success btn-lg btn-block"><i class="fas fa-paper-plane"></i> Envoi</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- MODALES -->
+
+          <div class="modal fade" id="modalmontant" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Montant des versements</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Veuillez indiquer le montant des paiements.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fermer la fenêtre">J'ai compris !</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modaldate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Date du premier versement</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Veuillez indiquer la date de votre premier paiement.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fermer la fenêtre">J'ai compris !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="modal fade" id="modalfrequence" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Fréquences des versements</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Veuillez choisir la fréquence des versements.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fermer la fenêtre">J'ai compris !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIBRAIRIES LOCALES (CTRL-C/V CDN DANS URL, SAVE AS ET DEPOSER DANS LE DOSSIER DIST) -->
+    <script src="dist/js/jquery.slim.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

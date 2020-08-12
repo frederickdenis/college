@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Image Responsive</title>
+    <style>
+        body{
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 1.2em;
+            background-color: #231F20;
+        }
+        main{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            text-align: center;
+            padding: 50px;
+        }
+        h1{
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+        }
+        h2{
+            text-decoration: underline;
+            text-align: left;
+        }
+        h3{
+            font-family: "Open Sans Condensed", sans-serif;
+            margin:0;
+        }
+        .italique{
+            font-style: italic;
+        }
+        footer{
+            background-size: 5em;
+            background-position: center;
+            width: 70%;
+            height: 300px;
+            padding: 10%;
+        }
+        div{
+            text-align: center;
+        }
+        p{
+            margin: 0.5em;
+            text-align: justify;
+        }
+        footer > p{
+            border-top: 2px solid #fff;
+            text-align: center;
+            font-size: .7em;
+            padding: 1%;
+        }
+        img{
+            width: 100%;
+            /* height: auto; */
+            max-width: 500px;
+        }
+        @media screen and (max-width: 640px){
+            h2{
+                text-align: center;
+            }
+            body{
+                font-size: 0.9em;
+            }
+            img{
+                border: 5px solid rgb(197, 197, 197);
+                width: 150px;
+                height:auto;
+            }
+        }
+        @media screen and (min-width: 641px) and (max-width: 959px){
+            h2{
+                text-align: center;
+            }
+            body{
+                font-size: 1.1em;
+            }
+            img{
+                border: 10px solid rgb(139, 139, 139);
+                width: 250px;
+                height:auto;
+            }
+        } 
+        @media screen and (min-width: 960px) and (max-width: 1279px){
+            main{
+                margin: 0 auto;
+                width: 85%;
+            }
+            img{
+                border: 15px solid rgb(85, 85, 85);
+                min-width: 300px;
+                height:auto;
+            }
+            #contenu{
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            #text{
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+        @media screen and (min-width: 1279px){
+            main{
+                margin: 0 auto;
+                width: 85%;
+            }
+            img{
+                border: 15px solid rgb(0, 0, 0);
+                min-width: 380px;
+                height:auto;
+            }
+            #contenu{
+                display: flex;
+                flex-direction: row;
+            }
+            #text{
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sapiens - Une brève histoire de l'humanité</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div id="contenu">
+            <img src="images/sapiens-500.jpg" alt="sapiens" title="sapiens" width="500" height="768">
+            <div id="text">
+                <h2>En Bref:</h2>
+                <p>Sapiens : Une brève histoire de l’humanité est un livre de Yuval Noah Harari publié pour la première fois en hébreu en <time datetime="2011">2011</time>, puis en anglais en <time datetime="2014">2014</time> et en français aux éditions Albin Michel en <time datetime="2015">2015</time>. Harari cite Jared Diamond, auteur de <span class="italique">De l'inégalité parmi les sociétés</span> , comme l’une de ses principales sources d’inspiration pour l’écriture de son livre. Diamond avait en effet montré qu’il était possible de <span class="italique"> « poser de vraies grandes questions et d’y répondre scientifiquement ».</span></p>
+                <p>Le livre propose une vue d’ensemble de l’histoire de l’humanité et de son évolution depuis les premiers hommes de l’âge de pierre jusqu’au 21<sup>ème</sup> siècle. Le principal argument avancé par l’auteur au cours de cette vaste étude est que l’Homo sapiens doit son statut d’espèce dominante au fait qu’il est <span class="italique"> le seul animal capable de coopérer efficacement avec un grand nombre de ses semblables</span>. Harari explique cette capacité qui distingue l’Homo sapiens des autres animaux par sa faculté de croire en des choses qui n’existent que dans son imagination, telles que les dieux, les nations, l’argent et les droits de l’homme. L'une des thèses défendues par l’auteur est donc que tous les systèmes de coopération humaine à grande échelle; les religions, les structures politiques, les réseaux de travail et les institutions légales, sont en définitive des fictions.</p>
+            </div>
+        </div>
+        <footer>
+            <p>Production de médias interactifs</p>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

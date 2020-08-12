@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    
+    <style>
+        /* ------------------------------------------------	*/
+        /* 				       LOCAL CSS    				*/
+        /* ------------------------------------------------	*/
+        body {
+            background-color: #221f1f;
+            color: #fff;
+            font: .8em Verdana, Geneva, sans-serif;
+        }
+
+        header {
+            background-color: #fff;
+            color: #f44933;
+            margin-bottom: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        p {
+            font-family: "Source Sans Pro", sans-serif;
+            line-height: 2em;
+            text-align: justify;
+        }
+        
+        .bloc-ipsum {
+            background-color: #221f1f;
+            border: 3px solid #333;
+            margin: 20px auto;
+            padding: 20px;
+            width: 480px;
+        }
+        .bloc-bouton {
+            background: #4480C7;
+            border-radius: 10px;
+            margin: 2em auto;
+            padding: 20px 10px;
+            text-align: center;
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        a:link {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .vert-fluo {
+            background-color: #9f0;
+            color: #000;
+        }
+        
+        .orange-vif {
+            background-color: #fc0;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JQuery</h1>
+        <h3>Exemple | Chaînabilité</h3>
+    </header>
+
+    <section class="bloc-ipsum">
+        <p>
+            Strip steak biltong <a href="javascript:alert('prosciutto');">prosciutto</a> pastrami capicola <span class="vert-fluo">shankle flank</span>, jowl pork belly ball tip boudin tongue ground round ribeye. Rump tri-tip hamburger, ground round pancetta turducken pork loin short loin. Bresaola beef venison short ribs spare ribs. Swine beef ground round, beef ribs shoulder filet mignon salami ham turducken drumstick cow. Brisket pastrami biltong, shank ribeye swine sausage tri-tip tenderloin salami. Turkey bacon pastrami ball tip pork pig salami jerky meatloaf pork belly, turducken ham hock. Pork belly ground round kielbasa hamburger leberkase. Pork loin <a href="javascript:;">tenderloin flank</a>, jowl corned beef capicola filet mignon ground round kielbasa.
+        </p>
+        <div id="section-affichage"></div>
+    </section>
+
+    <section class="bloc-bouton">
+        <a href="javascript:;" class="bouton" title="Hyperlien bouton" role="button">Bouton</a>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            function faisTaJob(){
+
+                $(".bloc-bouton").click(function(){
+                    console.log("cliqué");
+                    $(".vert-fluo").append(" ...Hum, du bon bacon... ").css("border", "1px solid red").addClass("orange-vif").removeClass("vert-fluo");
+                    
+                });
+            }
+            faisTaJob();
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>

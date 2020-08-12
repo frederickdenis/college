@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>String</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Méthodes d'objet string()</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div>
+            <div id="formulaire">
+                <form action="#">
+                    <input type="text" id="texte" name="texte" placeholder="Entrez le texte">
+                    <p>Entrez votre texte et choisissez une méthode de l'objet string à lui appliquer.</p>
+                </form>
+            </div>
+            <div id="affichage">
+            </div>
+            <div id="boutons">
+                <div class="bouton" id="bouton1">
+                    <p>toUpperCase()</p>
+                </div>
+                <div class="bouton" id="bouton2">
+                    <p>split()</p>
+                </div>
+                <div class="bouton" id="bouton3">
+                    <p>replace(regex)</p>
+                </div>
+                <div class="bouton" id="bouton4">
+                    <p>substr()</p>
+                </div>
+                <div class="bouton" id="bouton5">
+                    <p>substring()</p>
+                </div>
+                <div class="bouton" id="bouton6">
+                    <p>trim()</p>
+                </div>
+            </div>     
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script>
+        //méthodes a faire -> toUpperCase(), split(), replace(regex), substr(), substring(), trim()
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+        
+
+        function $(el){
+            return document.querySelector(el);
+        }
+        //variable globale de valeur de texte
+        
+        //toUpperCase
+        function mettreEnMajuscule(e){
+            let texte = $("#texte").value;
+            let texteAMaj = texte.toUpperCase();
+            $("#affichage").innerHTML = texteAMaj + `<br><p class="explicatif">Le texte est maintenant en majuscule</p>`;
+            console.log (texteAMaj);
+        }
+        $("#bouton1").addEventListener("click", mettreEnMajuscule);
+
+
+        //split
+        function separer(e){
+            let texte = $("#texte").value;
+            let texteASplit = texte.split(" ");
+
+            $("#affichage").innerHTML = texteASplit+ `<br><p class="explicatif">Le texte est maintenant séparé par des virgules.</p>`;
+            console.log (texteASplit);
+        }
+        $("#bouton2").addEventListener("click", separer);
+
+
+        //replace
+        function remplaceRegEx(e){
+            let texte = $("#texte").value;
+            let texteARemplacer = texte.replace("Microsoft", "W3Schools");
+
+            $("#affichage").innerHTML = texteARemplacer+ `<br><p class="explicatif">Microsoft est changé pour W3Schools.</p>`;
+            console.log (texteARemplacer);
+        }
+        $("#bouton3").addEventListener("click", remplaceRegEx);
+
+
+        //SUBSTR
+        function texteAChanger (e){
+            let texte = $("#texte").value;
+            let texteARemplacer = texte.substr(1, 10);
+
+            $("#affichage").innerHTML = texteARemplacer + `<p class="explicatif">Le texte n'affiche que les lettres entre les positions 1 à 10 (en incluant la 10ème position; en base zéro).</p>`;
+            console.log (texteARemplacer);
+        }
+        $("#bouton4").addEventListener("click", texteAChanger);
+
+
+        //SUBSTRING
+        function retirerTexte(e){
+            let texte = $("#texte").value;
+            let texteARetirer = texte.substring(1, 10);
+
+            $("#affichage").innerHTML = texteARetirer + `<p class="explicatif">Le texte n'affiche que les lettres entre les positions 1 à 10 (en excluant la 10ème position; en base zéro).</p>`;
+            console.log (texteARetirer);
+        }
+        $("#bouton5").addEventListener("click", retirerTexte);
+
+
+        //trim
+        function elaguer(e){
+            let texte = $("#texte").value;
+            let texteAElaguer = texte.trim();
+
+            $("#affichage").innerHTML = texteAElaguer + `<p class="explicatif">Le texte n'affiche plus les espaces non-necessaires.</p>`;
+            console.log (texteAElaguer);
+        }
+        $("#bouton6").addEventListener("click", elaguer);
+        
+
+
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX | JQUERY SIMPLE</title>
+    <style>
+        /* style ici­ */
+    </style>
+</head>
+<body>
+    <section id="bloc-affichage"></section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+    // script ici
+        $(document).ready( function (){
+        
+            $.ajax({
+                "type": "GET",
+                "url": "data.json",
+                "dataType": "json"
+            })
+            .done( function( data, textStatus, jqXHR ) {
+                // console.log("Text Status : " + textStatus + " - Data : " + data);
+                console.dir(data);
+
+                let items = [];
+                for(prop in data) {
+                    
+                    let valeur = data[prop];
+                    // let message = "<div id='"+ prop"'>" + valeur + "</div>";
+                    let message = `<div id = '${prop}'>${valeur}</div>`;
+                    items.push( message );
+    
+                    $("#bloc-affichage").html(items);
+                }
+
+            })
+
+            .fail( function (jqXHR, textStatus, errorThrown) {
+                console.log("errorThrown " + textStatus);
+            })
+            
+            .always (function (jqXHR, textStatus) {
+                console.log("Fin de l'exécution");
+            });
+        
+        });
+
+
+    </script>
+</body>
+</html>

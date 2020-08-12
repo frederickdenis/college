@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice - Affiche fruit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
+    <div id="photo-cliquables">
+        <img id="orange" src="images/orange.png" alt="orange" title="Orange">
+        <img id="poire" src="images/poire.png" alt="poire" title="Poire">
+        <img id="pomme" src="images/pomme.png" alt="pomme" title="Pomme">
+    </div>
+    <div id="affichage">
+    </div>
+    <footer>
+        <img src="images/logo-blanc.png" alt="logo" title ="Le Barbu Efficace">
+    </footer>
+    <script>
+        const boutons = document.querySelectorAll("#photo-cliquables > img");
+
+        function $(el){
+            return document.querySelector(el);
+        }
+
+        function afficheHeader(){
+            var prenom = "Frederick Denis";
+            $("header").innerHTML = `<h1>Choix de fruits</h1><h3>Par ${prenom}</h3>`
+        }
+        afficheHeader();
+
+        function choixFruit(quelFruit){
+            switch(quelFruit){
+                case "orange":
+                    $("#affichage").innerHTML = `<p>${quelFruit} : 1.00 $</p>`;
+                    console.log(quelFruit);
+                    break;
+                case "poire":
+                    $("#affichage").innerHTML = `<p>${quelFruit} : 2.00 $</p>`;
+                    console.log(quelFruit);
+                    break;
+                case "pomme":
+                    $("#affichage").innerHTML = `<p>${quelFruit} : 1.50 $</p>`;
+                    console.log(quelFruit);
+                    break;
+                default:
+                    $("#affichage").innerHTML = `<p>Choisissez un fruit</p>`
+            }
+
+        }
+        
+        function gestionnaireEvent(){
+            for (let i = 0; i < boutons.length; i += 1){
+                boutons[i].addEventListener("click", function(e) {
+                    choixFruit(this.id);
+                });
+            }
+        }
+        gestionnaireEvent();
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<title>Sélecteurs CSS3</title>
+
+	<style>
+      body, a {
+        background-color: #1e1e1e;
+        color: #fff;
+        font-family: Verdana, Geneva, sans-serif;
+        padding: 20px;
+      }
+      
+      h1 {
+        padding-bottom: 40px;  
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      a[class*="item"]{
+        font: bold italic 12px/12px Georgia, "Times New Roman", serif;
+      }
+      a[class="premier-item"]{
+        color: #eae938;
+      }
+      a[title^="deuxieme"]{
+        color: #9ad5f0;
+      }
+      a[class$="trois"]{
+        color:#fccee6;
+      }
+      a[class~="5e"]{
+        color: #000;
+      }
+      a[title~="élément"]{
+        color:#999;
+      }
+      #liens a:nth-child(5){
+        color:rgb(0, 153, 46);
+      }
+      #liens a:nth-of-type(5){
+        color:rgb(0, 153, 46);
+      }
+      a:first-child{
+        background-color: magenta;
+      }
+      a:last-child{
+        background-color: darkorange;
+      }
+      #liens> *:nth-child(odd){
+        background-color: darkred;
+      }
+
+ 
+    </style>
+</head>
+<body>
+    <section>
+		<div>
+    		<h1>CSS3 | Sélecteurs</h1>
+		
+    		<div id="liens">
+<!--    		    <h3>Énumération de liens</h3>-->
+    			<a href="javascript:;" class="premier-item" title="premier-item">Premier item</a>
+    			<a href="javascript:;" class="deuxieme-item" title="deuxieme-item">Deuxième item</a>
+    			<a href="javascript:;" class="item-trois" title="item-trois élément troisième">Troisième item</a>
+   			<span>☻</span>
+    			<a href="javascript:;" class="item" title="item">Quatrième item</a>
+          <a href="javascript:;" class="numero 5e item" title="numero 5e item">5è item</a>
+    		</div>
+    		
+    	</div>
+
+    </section>
+</body>
+</html>

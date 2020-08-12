@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choix de langues</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Choix de Langues</h1>
+        </header>
+        <div class="menu">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/france.png" alt="Drapeau Français" height="100" width="150">
+                        <figcaption id="fr"><a href="javascript:;">Français</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/gb.png" alt="Drapeau Grande-Bretagne" height="100" width="150">
+                        <figcaption id= "en"><a href="javascript:;">English</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/spain.png" alt="Drapeau Espagne" height="100" width="150">
+                        <figcaption id="es"><a href="javascript:;">Español</a></figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <section>
+            <h2></h2>
+        </section>
+    </main>
+    <script>
+        //VERSION 4
+
+        function choixLang( quelleLangue ) {
+            let message = " ";
+
+            // const francais = document.querySelector(".fr")
+            // const english = document.querySelector(".en")
+            // const espanol = document.querySelector(".es")
+
+            if(quelleLangue == "fr") {
+                message = "Bienvenue";
+            } else if (quelleLangue == "en") {
+                message = "Welcome";
+            } else if (quelleLangue == "es"){
+                message = "Bievenido";
+            } else {
+                message = "Choisir / Choose / Elegir";
+            }
+            document.querySelector("h2").innerHTML = message;
+
+            document.querySelector("#fr").addEventListener("click", function(){
+                choixLang(this.id);
+            });
+
+            document.querySelector("#en").addEventListener("click", function(){
+                choixLang(this.id);
+            });
+
+            document.querySelector("#es").addEventListener("click", function(){
+                choixLang(this.id);
+            });
+        }
+        choixLang();
+
+
+        // //VERSION 3
+        // function choixLang(message) {
+
+        //     const francais = document.querySelector(".francais")
+        //     const english = document.querySelector(".english")
+        //     const espanol = document.querySelector(".espanol")
+            
+        //     francais.addEventListener("click", function(){
+        //         document.querySelector("h2").innerHTML = ("Bienvenue")
+        //     });
+
+        //     english.addEventListener("click", function(){
+        //         document.querySelector("h2").innerHTML = ("Welcome")
+        //     });
+
+        //     espanol.addEventListener("click", function(){
+        //         document.querySelector("h2").innerHTML = ("Bienvenido")
+        //     });
+        // }
+        // choixLang();
+
+
+        //VERSION 2
+        // function afficheMsg(message){
+        //     document.querySelector("h2").innerHTML = message
+        //     console.log (message);
+        // }
+        // afficheMsg("Choisir / Choose / Elegir");
+
+
+        //VERSION 1
+        // function afficheMsgAcc(){
+        //     document.querySelector("h2").innerHTML = ("Choisir / Choose / Elegir ")
+        // }
+        // function afficheMsgFr() {
+        //     document.querySelector("h2").innerHTML = ("Bienvenue.")
+        // } 
+        // // afficheMsgFr();
+
+        // function afficheMsgEn() {
+        //     document.querySelector("h2").innerHTML = ("Welcome.")
+        // } 
+        // // afficheMsgEn();
+
+        // function afficheMsgEs() {
+        //     document.querySelector("h2").innerHTML = ("Bienvenido.")
+        // } 
+        // afficheMsgAcc();
+        // // afficheMsgEs();
+    </script>  
+</body>
+</html>

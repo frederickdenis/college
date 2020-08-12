@@ -1,0 +1,137 @@
+body{
+    background-color: #000;
+    font-family: sans-serif;    
+}
+p{
+    font-size: 14px;
+}
+body > header{
+    background-color: #000;
+}
+header > h1:before{
+    content: "\272A";
+}
+/*https://www.toptal.com/designers/htmlarrows/symbols/circled-white-star/*/
+header{
+    text-align: center;
+    color:#fff;
+}
+header > h4{
+    color: #93ccf5;
+}
+nav{
+    background-color: #666;
+    height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+nav li{
+    display: inline;
+    list-style-type: none;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+nav li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px 10px 0;
+}
+nav li a:hover{
+    text-decoration: underline;
+    font-size: 15px;
+}
+nav li a:active{
+    color:#000;
+    font-size: 15px;
+}
+section{
+    margin: 0 auto;
+    width: 650px;
+}
+#art1{
+    background-color: #66200f;
+    border: 10px solid #93ccf5;
+    padding-bottom: 15px;
+    text-align: justify;
+}
+#art1 header{
+    text-align: center;
+    font-weight: bold;
+}
+#art1 header, ol, ul, li{
+    color:#fff;
+    list-style-type: none;
+    font-size: 14px;
+    margin: 0 auto;
+    width:420px;
+    
+}
+#art1 img{
+    border: 10px solid #000;
+}
+#art1 footer{
+    text-align: center;
+    color: #fff;
+    font-weight: bold
+}
+.rouge{
+    color: #f44933;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#art1 a{
+    text-decoration: none;
+    color:#fff;
+}
+#art1 a:hover{
+    text-decoration: underline;
+}
+#art2{
+    background-color: #fff;
+    border: 10px solid #93ccf5;
+    margin-top: 20px;
+}
+#art2 h3{
+    text-align: center;
+    color: #000;
+}
+#art2 img{
+    border: 10px solid #000;
+}
+#art2 a{
+    text-decoration: none;
+    color: #000;
+}
+#art2 a:hover{
+    text-decoration: underline;
+}
+figcaption{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #000;
+}
+cite{
+    font-weight: bold;
+}
+.gras{
+    font-weight: bold;
+}
+span > li a{
+    text-decoration: none;
+    color:#fff;
+}
+section + footer{
+    background-color: #666;
+    height: 80px;
+}
+footer p{
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+}
+

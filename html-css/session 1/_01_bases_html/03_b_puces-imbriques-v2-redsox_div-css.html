@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple de liste à puces - Web Standards Solutions</title>
+        <style>
+        div {
+/*            background-color: #9cf; */
+            border: 1px solid #222;
+            font: .8em Verdana, Geneva, sans-serif;
+            padding: 10px;
+            width: 380px;
+        }
+        ul {
+            list-style: none;
+        }
+
+        li > ul { 
+            list-style-image: url("puce-pointe-a-droite.png");
+        }
+/*      ligne 18=tout les ul enfants de li/tout les ul dont le praent est li*/
+        div > ul > li:first-child, li span, div > ul > li:last-child {
+            font-weight: bold;
+/* liste des propriétés appliquées dans la hiérarchie CSS, sur 3 éléments ciblés.*/
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Weblog</li>
+            <li><span>Articles</span>
+                <ul>
+                    <li>How to Beat the Red Sox</li>
+                    <li>Pitching Past the 7th Inning
+                        <ul>
+                            <li>Part I</li>
+                            <li>Part II</li>
+                        </ul>
+                    </li>
+                    <li>Eighty-Five Years Isn't All That Long, Really</li>
+                </ul>
+            </li>
+            <li>About</li>
+        </ul>
+    </div>
+</body>
+</html>

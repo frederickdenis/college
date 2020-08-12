@@ -1,0 +1,151 @@
+body{
+    background: url(images/cadpat.jpg);
+}
+main{
+    margin: 0 auto;
+    width: 100em;
+    background: url(images/regiment-de-la-chaudiere-flag.png) no-repeat;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-position: 69em 13em;
+    background-size: 30em 15em;
+}
+header{
+    padding: 0 0 2em 1em;
+    border-bottom: dashed 0.1em #000;
+    font-family: 'Bree Serif', serif;  
+}
+h1{
+    font-size: 4em;
+    border: none;
+    margin: 0;
+    padding: 0.5em 0 0 0;
+}
+h2{
+    font-size: 1.8em;
+    margin: 0;
+    padding-left: 5em;
+}
+.contenu > h4{
+    font-family: 'Bree Serif', serif;  
+    font-size: 1.7em;
+    margin: 0;
+}
+article{
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    justify-content: flex-start;
+    padding: 1em 0 3em 1em;
+}
+.texteheadbrun{
+    margin: 1em 0 1em 0;
+    font-size: 1.3em;
+    color:rgb(202, 151, 74);
+}
+.soustextehead{
+    margin: 0.1em 0 0.2em 0;
+    font-size: 1em;
+}
+.contenu{
+    display:flex;
+    flex-direction: column;
+    padding: 0 0 0 2em;
+    max-width: 32em;
+    text-align: justify;
+}
+.cartespostales{
+    display: flex;
+    justify-content: space-around;
+}
+.headerdevise{
+    display: flex;
+    justify-content: center;
+    font-family: 'Bree Serif', serif; 
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.carte1{
+    background: url(images/chateauguay.png) no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    border: 0.5em solid #000;
+}
+.carte2{
+    background: url(images/dday.png)no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    border: 0.5em solid #000;
+}
+.carte3{
+    background: url(images/caen.png) no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    border: 0.5em solid #000;
+}
+.carte4{
+    background: url(images/escault.png) no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    border: 0.5em solid #000;
+}
+.carte5{
+    background: url(images/afghanistan.png) no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    border: 0.5em solid #000;
+}
+.hautcarte{
+    display: flex;
+    justify-content: space-around;
+}
+.textehautcarte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+.texteblanc{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold; 
+    color: #fff;
+}
+.honneur{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    font-family: "Roboto", sans-serif;
+    padding: 0.5em;
+    border-top-left-radius: 1em;
+}
+.honneur:hover{
+    text-decoration: underline;
+}
+.honneur:visited{
+    color: rgb(116, 116, 116);
+}
+.honneur:active{
+    color: rgb(214, 214, 214);
+}
+

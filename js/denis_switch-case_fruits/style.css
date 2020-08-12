@@ -1,0 +1,29 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+}
+#photo-cliquables{
+    display: flex;
+    padding: 1%;
+    margin: 1%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+img{
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 1em;
+}
+#affichage{
+    height: 4em;
+    font-size: 1em;
+}
+footer, header, p{
+    color: #fff;
+    margin: 0;
+    padding: 1%;
+}
+p{
+    text-transform: capitalize;
+}

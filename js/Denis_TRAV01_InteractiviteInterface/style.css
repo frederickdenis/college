@@ -1,0 +1,85 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-attachment: fixed;
+    /* https://www.google.com/search?q=fix+background+css&rlz=1C1GCEA_enCA817CA817&oq=fix+background+css&aqs=chrome..69i57j0l5.3166j0j7&sourceid=chrome&ie=UTF-8 */
+    background-image: url(images/programming-1873854_1920.png);
+}
+main{
+    color: #fff;
+    margin: 0 auto;
+    width: 1500px;
+    background-color: rgba(54, 54, 54, 0.97);
+    padding: 10px;
+}
+header{
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+div{
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#reponse2{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: none;
+}
+.elementampoule{
+    background-color: #000;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
+    -webkit-transition: 0.2s;
+}
+.elementampouleon{
+    background-color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
+    -webkit-transition: 0.2s;
+}
+.q4{
+    display: flex;
+    justify-content: center;
+    border:none;
+}
+.quest5{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoconnection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoconnection > input, label{
+    width: 200px;
+    padding: 10px;
+}
+#fin{
+    margin: 20px 0;
+}
+.taxe{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}

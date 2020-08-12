@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Achat d'une Télévision</title>
+</head>
+<body>
+    <h2>Achat d'une télévision</h2>
+    <h3></h3>
+    <script>
+        //INITIALISATION
+        let argent = 700;
+        //LOGIQUE
+        function achatTV(quelleTaille){
+            // console.log("achat de TV " + quelleTaille);
+            document.querySelector("h3").innerHTML = "Achat d'une télévision de " + quelleTaille;
+        }
+        function faireHeureSupp(){
+            // console.log("fais des heures");
+            document.querySelector("h3").innerHTML = "Faire des heures supplémentaires pour avoir " + argent + "$";
+        }
+        function faireVerification(combienArgent){
+            if ( combienArgent > 500) {
+                achatTV("35 pouces");
+            }else if( combienArgent > 300){
+                achatTV("27 pouces");
+            }else{
+                faireHeureSupp();
+            }
+        }
+        //CALL AND PRINT
+        faireVerification(argent);
+    </script>
+</body>
+</html>

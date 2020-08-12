@@ -1,0 +1,128 @@
+main{
+    margin: 0 auto;
+    width: 100em;
+    background: url(./images/la-mouche.jpg) no-repeat;
+    background-position: 38em 20em;
+    background-size: 840px 525px
+    /* https://stackoverflow.com/questions/1341358/set-size-on-background-image-with-css */
+    /* https://caniuse.com/#search=background-size */
+}
+header{
+    padding: 5em 0 2em 0;
+    border-bottom: dashed 0.1em rgb(202, 151, 74);
+    font-family: 'Bree Serif', serif;  
+}
+h1{
+    font-size: 10em;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 1.8em;
+    margin: 0;
+    margin-top: -1.5em;
+    padding-left: 9em;
+    
+}
+.contenu > h4{
+    font-family: 'Bree Serif', serif;  
+    font-size: 2em;
+}
+article{
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    justify-content: flex-start;
+    padding: 3em 0 3em 0;
+    border-bottom: dashed 0.1em rgb(202, 151, 74);
+
+}
+header > h4{
+    font-size: 3em;
+    margin: -1.5em 0 0 0;
+    
+}
+.texteheadbrun{
+    margin:-1em 0 1em 0;
+    font-size: 1.4em;
+    color:rgb(202, 151, 74);
+}
+.soustextehead{
+    margin: 0.1em 0 0.2em 0;
+    font-size: 0.9em;
+}
+.contenu{
+    display:flex;
+    flex-direction: column;
+    padding: 0 0 0 2em;
+    max-width: 35em;
+}
+.cartespostales{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+.carte{
+    background: url(images/vignette.jpg);
+    width: 18em;
+    height: 12em;
+    margin: 1em;
+}
+.hautcarte{
+    display: flex;
+    justify-content: space-around;
+}
+.textehautcarte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+.textebleu{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold; 
+    color: rgb(60, 7, 184);
+}
+.timbre{
+    padding-top: 1em;
+}
+.contenucarte{
+    display: flex;
+    justify-content: space-around;
+}
+.textecentrecarte{
+    width: 6em;
+}
+.grosbleu{
+    font-size: 1.3em;
+    color: rgb(38, 146, 247);
+    text-decoration: none;
+}
+.grosbleu:hover{
+    color:rgb(36, 13, 243);
+}
+.soustextebleu{
+    color: rgb(38, 146, 247);
+}
+.petiteslignes{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    padding-top: 1em;
+    width: 6.5em;
+
+}
+.ligne{
+    border-bottom: #000 solid 1px;
+    margin-bottom: 0.2em;
+}
+.textecentrecarte > p, .soustextebleu{
+    font-size: 0.8em;
+}
+.cartespostales{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    border: 0.2em;
+}

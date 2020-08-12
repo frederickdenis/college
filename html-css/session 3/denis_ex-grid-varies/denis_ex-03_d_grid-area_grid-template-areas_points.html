@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>Grid template area - points</title>
+    <style>
+        body{
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 1.2em;
+            background-color: #231F20;
+        }
+        main{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            text-align: center;
+        }
+        h1{
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+        }
+        h3{
+            font-family: "Open Sans Condensed", sans-serif;
+            margin:0;
+        }
+        div{
+            margin: 50px auto;
+            align-content: center;
+        }
+        footer{
+            background: url(images/logo-blanc.png) no-repeat;
+            background-size: 5em;
+            background-position: center;
+            width: 70%;
+            height: 300px
+        }
+        input{
+            width: 500px;
+            border: 3px solid rgb(144, 144, 144);
+            box-shadow: 0 0 5px 5px rgb(190, 190, 190);
+            padding: 5px;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 3em;
+            grid-template-areas: 'myArea myArea . . . ';
+        }
+        .grid-container > div{
+            background-color: #231F20;
+            border: 2px solid #2f2f2f;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .item1{
+            grid-area: myArea;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Grid template area - points</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div class="grid-container">
+            <div class="item1"> -1- </div>
+            <div class="item2"> -2- </div>
+            <div class="item3"> -3- </div>
+            <div class="item4"> -4- </div>
+            <div class="item5"> -5- </div>
+            <div class="item6"> -6- </div>
+            <div class="item7"> -7- </div>
+            <div class="item8"> -8- </div>
+            <div class="item9"> -9- </div>
+        </div>
+        <footer>
+
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AGP - Question finale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+       
+        <!-- Section des boutons Médias -->
+        <section class="zone-boutons">
+            <!-- Bouton 1 -->
+            <div id="films">
+                <img src="images/films-128.png" width="100" height="100" alt="Films">
+                <h3>Films</h3>
+            </div>
+            <!-- Bouton 2 -->
+            <div id="musiques">
+                <img src="images/musiques-128.png" width="100" height="100" alt="Musiques">
+                <h3>Musiques</h3>
+            </div>
+            <!-- Bouton 3 -->
+            <div id="jeux">
+                <img src="images/jeux-128.png" width="100" height="100" alt="Jeux">
+                <h3>Jeux</h3>
+            </div>
+            <!-- Bouton 4 -->
+            <div id="livres">
+                <img src="images/livres-128.png" width="100" height="100" alt="Livres">
+                <h3>Livres</h3>
+            </div>
+        </section>
+
+       
+        <!-- Section d'information (texte dynamique) -->
+        <section id="medias-texte" class="couleur-info">
+        </section>
+
+       
+        <!-- Section image d'arrière-plan (dynamique) -->
+        <section id="medias-image" class="img-choisir">
+        </section>
+        
+    </main>
+
+   
+    <script> 
+            /* Placez vos scripts ci-dessous. */
+        function main(){
+
+            const boutons = document.querySelectorAll(".zone-boutons > div");
+
+                function $ (el){
+                    return document.querySelector(el);
+                }
+                /* ---------------------- Question A ---------------------- */
+                //
+                function affichePrenom(){
+
+                //init.
+                    const votrePrenom = "Frederick Denis";
+
+                //logique
+                    $("header").innerHTML = `<h2>Question Finale</h2><br><h3>Examen de ${votrePrenom}.</h3>`;
+                }
+                //call&print
+                affichePrenom();
+
+
+                /* ---------------------- Question B ---------------------- */
+                // 
+                function msgAccueil(){
+                    
+                //init
+                    let msg = "Choisir un divertissement..."
+                    
+                //logique
+                    $("#medias-texte").innerHTML = msg;
+
+                }
+                //call&print
+                msgAccueil();
+            
+                /* ---------------------- Question C ---------------------- */
+                // 
+
+                function divertissementMedia(choixDivertissement){
+
+                    function resetBoutons() {
+                        // for (let i = 0; i < boutons.length; i += 1){
+                        //     boutons[i].style.backgroundColor = "#404040";
+                        // }
+                        boutons.forEach( bouton =>{
+                            bouton.style.backgroundColor = "#404040";
+                        });
+                    }
+                    resetBoutons();
+
+
+                    if (choixDivertissement == "films"){
+                        document.getElementById("medias-texte").className = "bleu-films";
+                        document.getElementById("medias-image").className = "img-films";
+                        $("#films").style.backgroundColor = "#c42702"; 
+
+                    } else if (choixDivertissement == "musiques"){
+                        document.getElementById("medias-texte").className = "gris-musiques";
+                        document.getElementById("medias-image").className = "img-musiques";
+                        $("#musiques").style.backgroundColor = "#c42702";
+                        
+
+                    } else if (choixDivertissement == "jeux") {
+                        document.getElementById("medias-texte").className = "rose-jeux";
+                        document.getElementById("medias-image").className = "img-jeux";
+                        $("#jeux").style.backgroundColor = "#c42702";
+                        
+
+                    } else if (choixDivertissement == "livres") {
+                        document.getElementById("medias-texte").className = "jaune-livres";
+                        document.getElementById("medias-image").className = "img-livres";
+                        $("#livres").style.backgroundColor = "#c42702";
+                        
+                    }
+                    $("#medias-texte").innerHTML = "Sélection de la section des &#9733 " + choixDivertissement + " &#9733";
+                }
+                
+
+                function gestionnaireEvent(){
+                    for (let i = 0; i < boutons.length; i += 1){
+                        boutons[i].addEventListener("click", function(e) {
+                            divertissementMedia(this.id);
+                        });
+                    }
+                }
+                gestionnaireEvent();
+            }
+        main();
+    </script>
+</body>
+
+</html>

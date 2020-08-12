@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratique 4</title>
+</head>
+<body>
+    <h2></h2>
+    <script>
+    let champAdresseBienRempli = true;
+    let message = "vide";
+    let adresseUtilisateur= "Voici l'adresse"
+
+    if ( !champAdresseBienRempli ){
+        adresseUtilisateur = "";
+        message = "Entrez votre adresse SVP.";
+    }
+
+    console.log("message : " + message);
+    document.querySelector("h2").innerHTML = "message : " + message;
+    // let fenetreOuverte = false;
+    // if (fenetreOuverte){
+    //     console.log ("Veuillez ouvrir la fenetre");
+    // } else {
+    //     document.querySelector("h2").innerHTML = "La fenêtre est ouverte";
+    // }
+    </script>
+</body>
+</html>

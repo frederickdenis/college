@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <title>Ternaire</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Opérateur Ternaire</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div>
+            <pre>
+                <samp>
+                    <code>
+function nombrePlusGrand(a, b, c){
+
+    return ((a > b) && (a > c)) ? a : (b > c) ? b : c;
+
+}
+
+let resultat = nombrePlusGrand(1, 2, 3);
+
+console.log(resultat);
+document.querySelector("#affichage").innerHTML = "Le nombre le plus grand est " + resultat + " ."
+                    </code>
+                </samp>
+            </pre>
+            <p id="affichage"></p>
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+        function nombrePlusGrand(a, b, c){
+
+            return ((a > b) && (a > c)) ? a : (b > c) ? b : c;
+
+        }
+
+        let resultat = nombrePlusGrand(1, 2, 3);
+
+        console.log(resultat);
+        document.querySelector("#affichage").innerHTML = "Le nombre le plus grand est " + resultat + "."
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+    </script>
+</body>
+</html>

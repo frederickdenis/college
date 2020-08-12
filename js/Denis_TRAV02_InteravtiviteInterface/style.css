@@ -1,0 +1,78 @@
+body{
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+#afficheex1, #afficheex2, #afficheex3, #afficheex4, #afficheex5, #afficheex6, #afficheex7{
+    display: flex;
+    justify-content: center;
+}
+header{
+    color: #fff;
+    text-align: center;
+}
+
+main{
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    margin: 0 auto;
+    width: 1400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+.question{
+    border: 2px dashed #fff;
+    width: 40%;
+    padding: 2%;
+    margin: 1em;
+    border-radius: 2em;
+}
+h2{
+    /* text-decoration: underline; */
+    text-align: center;
+    background-color: #000;
+    height: 1.5em;
+    margin-top: -2em;
+    width: 10em;
+    border-radius: 1em;
+}
+ol{
+    list-style-type: none;
+    display: inline;
+}
+tr, td, th{
+    border: 1px solid #fff;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+}
+th{
+    font-style: italic;
+    font-weight: bold;
+}
+tr:hover{
+    background-color: rgb(133, 133, 133);
+}
+td:hover{
+    background-color: #000;
+}
+
+table{
+    background-color: #fff
+    color: #000;
+}
+footer{
+    background: url(logo-blanc.png) no-repeat center;
+    height: 10em;
+    text-align: center;
+    color: #fff;
+}
+h4{
+    text-decoration: underline;
+    font-style: italic;
+}
+pre{
+    background-color: #000;
+    border-radius: 1em;
+}

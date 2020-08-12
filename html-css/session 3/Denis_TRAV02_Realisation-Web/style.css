@@ -1,0 +1,185 @@
+/* MENU ET NAV */
+
+body{
+    font-family: "Open Sans Condensed", sans-serif;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.navgauche, ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navgauche img:hover{
+    background-color: #999;
+    border-radius: 3px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    padding: 0 1vw;
+}
+li > a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+li > a:hover{
+    text-decoration: underline;
+}
+
+input{
+    background-color: #000;
+    color:#ffffff;
+    border-radius: 25px;
+    padding: 5px 5px 5px 10px;
+    font-size: 1em;
+}
+.recherche{
+    display: flex;
+    align-items: center;
+}
+.recherche a{
+    padding: 0 10px;
+}
+.recherche img:hover{
+    background-color: #999;
+    border-radius: 3px;
+}
+
+/* JUMBOTRON1 */
+
+#jumbo1{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background: url(images/jumbo1.png) no-repeat center;
+    background-size: cover;
+    color: #fff;
+}
+#jumbo1 .textejumbo1{
+    padding: 50px 0 0 150px;
+    font-size: 1.7em;
+}
+.textejumbo1 a{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+}
+.textejumbo1 a:hover{
+    font-weight: bolder;
+}
+.curriculum{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 0 0 0;
+}
+.iconescv{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.boutoncv{
+    border: 2px solid #000;
+    width: 150px;
+    margin: 2em auto;
+    cursor: pointer;
+}
+.boutoncv:hover{
+    font-weight: bold;
+    background-color: #474747;
+    color: #fff;
+}
+.specialites{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 0 0 0;
+}
+.specialite{
+    text-align: center;
+}
+.specialite:hover{
+    background-color: #474747;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:#fff;
+}
+.alaune{
+    display: grid;
+    grid-template-columns: 600px 240px 240px;
+    grid-template-rows: 200px 200px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 0 0 0 ;
+    grid-column-gap: 3em;
+    grid-row-gap: 2.5em;
+    justify-content: center;
+    font-weight: bold;
+}
+.explicatif{
+    cursor: pointer;
+}
+.explicatif:hover{
+    text-decoration: underline;
+}
+.grossenouvelle{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.petitenouvelle1{
+    grid-area: 1 / 2 / 1 / 3;
+}
+.petitenouvelle2{
+    grid-area: 2 / 2 / 2 / 2;
+}
+.petitenouvelle3{
+    grid-area: 1 / 3 / 1 / 4;
+}
+.petitenouvelle4{
+    grid-area: 2 / 3 / 2 / 4;
+}
+.realisations{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 80%;
+    grid-gap: 3em;
+    margin: 0 auto;
+    padding: 3em 0;
+    justify-content: center;
+}
+.titregras{
+    font-weight: bold;
+}
+
+#jumbo2{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background: url(images/jumbo2.png) no-repeat center;
+    background-size: cover;
+    color: #fff;
+}
+#jumbo2 .textejumbo2{
+    padding: 50px 0 0 150px;
+    font-size: 1.7em;
+}
+.textejumbo2 a{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+}
+.textejumbo2 a:hover{
+    font-weight: bolder;
+}

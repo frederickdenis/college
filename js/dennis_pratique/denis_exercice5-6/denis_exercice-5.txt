@@ -1,0 +1,11 @@
+function reductionSalaire(montant){
+
+    if (montant > 4000){
+        montant -= montant*0.1;
+        console.log ("Votre salaire est maintenant de " + montant + " $.")
+    } else {
+        console.log ("Votre salaire de " + montant + " $ est brut.");
+    }
+}
+reductionSalaire(5000);
+//le -= est un truc montré par un ami !

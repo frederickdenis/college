@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemples JS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <h3 class="ex1"></h3>
+        <h3 class="ex2"></h3>
+        <h3 class="ex3"></h3>
+        <h3 class="ex4"></h3>
+        <h3 class="ex5"></h3>
+        <h3 class="ex6"></h3>
+        <h3 class="ex7"></h3>
+        <h3 class="ex8"></h3>
+        <h3 class="ex9"></h3>
+        <h3 class="ex10"></h3>
+        <h3 class="ex11"></h3>
+        <h3 class="ex12"></h3>
+        <h3 class="ex13"></h3>
+        <h3 class="ex14"></h3>
+        <h3 class="ex15"></h3>
+        <h3 class="ex16"></h3>
+    </div>
+    <script>
+        //EXEMPLE 1
+        //init
+        let score = 0;
+        let bonus = 0;
+        console.log("Bonus 1: " + bonus)
+        //logique
+        score = 110;
+        if ( score >= 100 ) { //J'ai ajouté le >= de mon gré afin de voir si ça fonctionnait vraiment à mon gout.
+            bonus++;
+        }
+        console.log( "Bonus 2: "+ bonus );
+        document.querySelector(".ex1").innerHTML = "Bonus : " + bonus;
+
+        //EXEMPLE 2
+        let ageUtilisateur = 0;
+        if ( ageUtilisateur != 0) {
+            ageUtilisateur = 0;
+            console.log ("RAZ de l'âge utilisateur")
+        }
+        document.querySelector(".ex2").innerHTML = "Âge de l'utilisateur :";
+
+        //EXEMPLE 3
+        let champAdresseBienRempli = true;
+        let adresseUtilisateur = "";
+        let message = "Entrez votre adresse SVP";
+        if (!champAdresseBienRempli){
+            adresseUtilisateur = "";
+        }
+        document.querySelector(".ex3").innerHTML = "Veuillez entrer voter adresse : ";
+
+        //EXEMPLE 4
+        let nomUtilisateur = "";
+        if (nomUtilisateur == null) {
+            nomUtilisateur = "Éric";
+        }
+        document.querySelector(".ex4").innerHTML = "Nom de l'utilisateur : ";
+
+        //EXEMPLE 5
+        let sexeUtilisateur = "";
+        if (sexeUtilisateur == "f") {
+        }
+        document.querySelector(".ex5").innerHTML = "Sexe de l'utilisateur : ";
+
+        //EXEMPLE 6
+        const nbrTentativeAcces = "0";
+        if (nbrTentativeAcces >= 5) {
+            bloqueAcces(); //FONCTION FICTIVE
+        }
+        document.querySelector(".ex6").innerHTML = "Accès Bloqué. Veuillez contacter votre administrateur réseau";
+
+        //EXEMPLE 7
+        let q1 = 0;
+        let q2 = 0;
+        let age = 0;
+        if (q1 == 5 && q2 == 7 ){
+            age++;
+        }
+        document.querySelector(".ex7").innerHTML = ("Vous êtes agés de " + age + " ans");
+
+        //EXEMPLE 8
+        var a = 2;
+        var b = 3;
+        var c = 4;
+        
+        const x = 2;
+        const y = 3;
+        console.log (x == 2 && y ==3);
+        console.log (x > 3 && y > 3);
+        console.log (x > 3 || y < 3);
+        console.log (x < 3 || y < 3);
+        var monTest = a > 2 && b>2||c<10
+        if (b == 3) b = 30 ;
+        console.log(monTest);
+        document.querySelector(".ex8").innerHTML = ("Voir console pour valeurs booléennes");
+
+        //EXEMPLE 9
+        var a = 3
+        var b = 3
+        var c = 3
+        if (a == b){
+            c++;
+        } else {
+            c--;
+        }
+        document.querySelector(".ex9").innerHTML = ("Valeur de la variable C : " + c);
+
+        //EXEMPLE 10
+        var choixLangue = "fr"
+        
+        if (choixLangue == "fr"){
+            document.querySelector(".ex10").innerHTML = ("Bienvenue");
+        } else {
+            document.querySelector(".ex10").innerHTML = ("Welcome")
+        }
+
+        //EXEMPLE 11
+        var choixLangue = ""
+
+        if (choixLangue != "fr"){
+            document.querySelector(".ex11").innerHTML = ("Welcome");
+        } else {
+            document.querySelector(".ex11").innerHTML = ("Benvenue");
+        }
+
+        //EXEMPLE 12
+
+        var nbreMessage = "10"
+        var aucunMess = "Vous n'avez aucun message."
+
+        if (nbreMessage ==1){
+            document.querySelector(".ex12").innerHTML = "Vous avez un nouveau message";
+        } else if (nbreMessage > 1) {
+            document.querySelector(".ex12").innerHTML = "Vous avez " + nbreMessage + " nouveaux messages";
+        } else {
+            document.querySelector(".ex12").innerHTML = aucunMess;
+        }
+
+        //EXEMPLE 13
+        var argent = ""
+        var humeur = ""
+
+        if (argent > 100000){
+            humeur = "Heureux";
+        } else {
+            humeur = "Normal";
+        }
+        document.querySelector(".ex13").innerHTML = humeur;
+
+        //EXEMPLE 14
+        let numItems = 3;
+        let panierStatus = "";
+
+        if (numItems == 0){
+            panierStatus = "Votre panier est vide";
+        } else {
+            panierStatus = "Total d'items : " + numItems;
+        }
+        document.querySelector(".ex14").innerHTML = panierStatus;
+
+        //EXEMPLE 15
+        var choixLangue = ""
+        var msg = ""
+
+        if (choixLangue == "fr"){
+            msg = "Bienvenue";
+        } else {
+            msg = "Welcome"
+        }
+        document.querySelector(".ex15").innerHTML = msg;
+
+        //EXEMPLE 16
+        let montantDispo = 0
+        let assezArgent = false
+        let modeleTv = ""
+
+        if (montantDispo >= 300) {
+            assezArgent = true;
+            modeleTv = "27 pouces"
+        } else if (montantDispo) {
+            assezArgent = true;
+            modeleTv = "35 pouces"
+        } else {
+            null;
+        }
+        document.querySelector(".ex16").innerHTML = "Tu peux acheter la TV" + modeleTv;
+
+        // var formatTv = "";
+        // // function achatTV(){
+        //     let nbHr = 400;
+        //     // var formatTv = "";
+
+        //     if (nbHr >= 500){
+        //         formatTv = "35 pouces"
+        //     } else if (nbHr >= 300){
+        //         formatTv = "27 pouces"
+        //     } /*lse {
+        //         formatTv = null;
+        //     }*/
+        
+        // document.querySelector(".ex16"). innerHTML = "Tu peux acheter la TV " + formatTv;
+
+
+        // //init fonction achatTV
+        // var nbHr = "40"
+        // var grosse = "35 pouces";
+        // var petite = "27 pouces"
+        // var argent = "500"
+        // function achatTV() {
+        //     // var grosse = "35 pouces";
+        //     // var petite = "27 pouces"
+        //     var nbreHr = faireHeureSupp();
+        // //logique
+
+        //     if (nbreHr >= 40){
+        //         true;
+        //     } else {
+        //         false;
+        //     }
+        // }
+        // //fin et appel de la fonction
+        // achatTV();
+        // //init fontion faireHeureSupp
+        // function faireHeureSupp() {
+        //     // var nbHr = "40"
+        // //logique
+        //     if ( nbHr <= 40){
+        //     nbHr = "Faire plus d'heures";
+        //     } else {
+        //         nbHr ="Tu es correct pour l'achat";
+        //     }
+        // }
+        // //fin et appel de la fonction
+        // faireHeureSupp();
+        // //init application des 2 fonctions
+        // var argent = "500"
+        // //logique
+        // if ( argent > 500 ){
+        //     achatTV (grosse);
+        // } else if (argent > 300){
+        //     achatTV (petite);
+        // } else {
+        //     faireHeureSupp(); 
+        // }
+        // //appel et display
+        // document.querySelector(".ex16").innerHTML= "Tu peux acheter la " + achatTV(); 
+
+        
+    </script>
+</body>
+</html>

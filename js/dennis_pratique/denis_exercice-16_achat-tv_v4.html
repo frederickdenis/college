@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Achat d'une Télévision</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        input, button{
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Achat d'une télévision</h2>
+        <form action="" id="formAchatTV" method="" autocomplete="off">
+            <label for="combienArgent">Entrez le montant</label>
+            <input type="text" id="combienArgent" name="combienArgent" value="0" size="7">
+            <button type="submit">OK</button>
+        </form>
+        <h3></h3>
+    </main>
+    <script>
+        //INITIALISATION
+        // PLUS BESOIN DE VARIABLE GLOBALE
+        //LOGIQUE
+
+        function achatTV(quelleTaille){
+            // console.log("achat de TV " + quelleTaille);
+            document.querySelector("h3").innerHTML = "Achat d'une télévision de " + quelleTaille;
+        }
+
+        function faireHeureSupp(deCombienArgent){
+            // console.log("fais des heures");
+            document.querySelector("h3").innerHTML = "Faire des heures supplémentaires pour avoir au moins " + deCombienArgent + "$ de plus";
+        }
+        faireHeureSupp(300);
+
+        function faireVerification(combienArgent){
+            if ( combienArgent > 500) {
+                achatTV("35 pouces");
+            }else if( combienArgent > 300){
+                achatTV("27 pouces");
+            }else{
+                faireHeureSupp(300 - combienArgent);
+            }
+        }
+
+        let monFormulaireAchatTV = document.querySelector("#formAchatTV");
+        monFormulaireAchatTV.addEventListener("submit", function (event){
+            event.preventDefault();
+
+            let valeurArgentEntre = document.querySelector("#combienArgent").value;
+            faireVerification(valeurArgentEntre);
+        });
+        //CALL AND PRINT
+        // faireVerification(argent); PAS NECESSAIRE
+    </script>
+</body>
+</html>

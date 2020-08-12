@@ -1,0 +1,107 @@
+#container{
+    margin:0 auto;
+    width: 1200px;
+}
+body{
+    background-color:#130258;
+    font-family: roboto, geneva, verdana, sans-serif;
+}
+#backgroundcolor{
+    background-color: #6053f7;
+}
+#stylescombines{
+    color:#6053f7;
+}
+#stylespecifique{
+    color:#6053f7;
+}
+#couleurtexte{
+    color:#6053f7;
+}
+#aligntexte{
+    text-align: center;
+}
+#gras{
+    font-weight: bold;
+}
+#italique{
+    font-style: italic;
+}
+#decoration{
+    text-decoration: underline;
+}
+#caracteres{
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+#maj{
+    text-transform: uppercase;
+}
+#polcar{
+    font-family: "Times new roman";
+}
+#fontsize{
+    font-size: 25px;
+}
+#chat{
+    border: 20px solid #000000;
+    margin: 20px;
+}
+#chat1{
+    border: 15px solid #6d6d6d;
+    margin: 20px;
+}
+#chat2{
+    border: 10px solid #130258;
+    margin: 20px
+}
+#demoimgbackground{
+    background-image:url(puce-pointe-a-droite.png);
+    background-blend-mode:hard-light;
+}
+#puces1{
+    list-style-type: none;
+}
+#puces2{
+    list-style-image: url(puce-pointe-a-droite.png);
+}
+body{
+    background-color: #130258;
+}
+div{
+    background-color:white;
+    text-align: justify;
+}
+#hautdepage{
+    color:white;
+    text-align: center;
+}
+pre{
+    background-color:black;
+    color:white;    
+}
+h3{
+    text-align: center;
+}
+div{
+    border-bottom: 2px solid #000000;
+    margin: 20px;
+    padding:15px;
+}
+#nocss{
+    font-family: "Times-New-Roman", sans-serif;
+}
+#basdepage{
+    text-align: center;       
+}
+#table{
+    list-style-type: upper-roman;
+}
+h6{
+    text-align: center
+}
+abbr{
+    text-decoration: none;
+}
+/*IMAGE GRACIEUSETÉ DE M. XAVIER MIRLYCOURTOIS*/
+/*Le chat sur la photo c'est le mien*/

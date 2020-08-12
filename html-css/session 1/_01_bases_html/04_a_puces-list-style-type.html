@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemples de liste à puces - Web Standards Solutions</title>
+  <style>
+    body {
+      background-color: #3f3f3f;
+      color: #fff;
+      font: .8em Verdana, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      height: 50px;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+
+    h1 {
+      display: none;
+    }
+
+    div {
+      display: inline-table
+      height: 350px;
+      margin: 10px;
+      padding: 10px;
+      width: 45%;
+    }
+
+    /* div:nth-of-type(1) { */
+    .bleu-fonce {
+      background-color: rgb(44, 87, 131);
+    }
+  
+    /* div:nth-of-type(2) { */
+    .bleu-pale {
+      background-color: rgb(64, 154, 214);
+    }
+
+    ul.carre {list-style-type: square;}
+    ul.cercle {list-style-type: circle;}
+    ul.disque {list-style-type: disc;}
+    ol.romain {list-style-type: upper-roman;}
+    ol.alphabet {list-style-type: lower-alpha;}
+    ol.grec {list-style-type: lower-greek;}
+    ol.nombre {list-style-type: decimal-leading-zero;}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Exemples de listes</h1>
+    <h2>Propriétés de <em>list-style-type</em></h2>
+  </header>
+
+  <!-- Première section div -->
+  <div class="bleu-pale">
+    <h2>Listes non-ordonnées &lt;ul&gt; :</h2>
+
+    <ul class="carre">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ul>
+    
+    <ul class="disque">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ul>
+
+    <ul class="cercle">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ul>
+
+    <ul class="hierarchie">
+      <li>Premier niveau
+        <ul>
+          <li>Deuxième niveau
+            <ul>
+              <li>Troisième niveau
+                <ul>
+                  <li>Quatrième niveau
+                    <ul>
+                      <li>Cinquième niveau</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Deuxième section div -->
+  <div class="bleu-fonce">
+    <h2>Listes ordonnées &lt;ol&gt; :</h2>
+
+    <ol class="romain">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ol>
+
+    <ol class="alphabet">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ol>
+    
+    <ol class="grec">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+      <li>Perrier</li>
+      <li>Jus</li>
+      <li>Gini</li>
+    </ol>
+
+    <ol class="nombre">
+      <li>Café</li>
+      <li>Thé</li>
+      <li>Eau</li>
+    </ol>
+  </div>
+
+</body>
+</html>

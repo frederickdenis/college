@@ -1,0 +1,359 @@
+/* TEMPLATE DE BASE */
+
+body{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2em;
+    background-color: #000;
+    font-size: 100%;
+}
+main{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(77, 77, 77);
+}
+header{
+    text-align: center;
+}
+.entete-petit{
+    text-align: left;
+}
+h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+}
+h3{
+    font-family: "Open Sans Condensed", sans-serif;
+    margin:1%;
+}
+h4{
+    font-size: 1.5em;
+}
+nav{
+    margin: 1% 3%;
+}
+div{
+    margin: 50px auto;
+    align-content: center;
+}
+footer{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-size: 75%;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+}
+main{
+    text-align: left;
+}
+#menugauche{
+    display: flex;
+}
+/* STANDARDS DE PAGE */
+
+
+#contenu{
+    width: 70%;
+    text-align: center;
+    background: #231F20;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+nav{
+    padding: 2%;
+    text-align: left;
+    list-style-type: none;
+    width: 250px;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+section{
+    border:2px solid rgb(85, 85, 85);
+    border-radius: 25px;
+    margin: 3%;
+    height: 350px;
+}
+p{
+    text-align: center;
+}
+dt{
+    text-align: center;
+    padding: 0.1%;
+    border-radius: 25px;
+    margin: 3%;
+    background-color: #000;
+}
+dd{
+    margin:0;
+    padding: 5%;
+}
+
+/* ANIMATION */
+ dd.anime{
+    width: 30%;
+    padding: 3% auto;
+    border-radius: 25px;
+    margin: 3% auto;
+    padding: 5% 0;
+    background: #231F20;
+    border: 2px solid #fff;
+    position: relative;
+    animation: anime 3s ease-in 1s 6 normal none;
+    }
+    @keyframes anime {
+        0%{
+        top: 0px;
+        left:0px;
+        }
+        25%{
+        top: 0px;
+        left: -25%;
+        }
+        50%{
+        top: 0px;
+        left:25%;
+        }
+        100%{
+        top: 0px;
+        left: 0px;
+        }
+}
+/* code animation de MDN */
+
+/* BACKGROUND MULTIPLES */
+.bgmultiple{
+    background: url(images/a.png) no-repeat left top, url(images/b.png) no-repeat center, url(images/c.png) no-repeat right bottom;
+    height: 250px;
+    background-size: 10%;
+    margin:0;
+}
+
+/* BOXSHADOW */
+.ombre{
+    width: 30%;
+    border-radius: 10px;
+    margin: 3% auto;
+    padding: 5% 0;
+    box-shadow: #fff 0 0 10px;
+    width: 25%;
+}
+dd div{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* COULEUR ET OPACITÉ */
+.couleurbg, .opacite{
+    margin: 1%;
+    padding: 1%;
+    width: 15%;
+    height: 15%;
+}
+.couleurbg{
+    background-color: rgb(133, 133, 133);
+    border-radius: 10px;
+}
+.opacite{
+    color:rgba(255, 255, 255, 0.5);
+}
+
+/* BORDER IMAGE */
+dd > #border{
+    text-align: center;
+}
+#border{
+    border: 20px solid transparent;
+    padding: 15px;
+    border-image: url(images/bordure.png) 100% space;
+    background: rgba(0, 0, 0, 0);
+    width: 25%;
+}
+
+
+/* COLONNES */
+
+.colonne{
+    column-count: 3;
+    column-gap: 1%;
+    column-rule: 2px solid #fff;
+    text-align: center;
+    margin: 0;
+}
+
+/* FONTES A CHANGER */
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('font/webfontkit-20190607-112934/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('font/webfontkit-20190607-112934/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#fontachanger{
+    font-family: 'alex_brushregular';
+    font-size: 2em;
+}
+
+
+
+/* DÉGRADÉ RADIAL */
+.degrade{
+    background: radial-gradient(#3f3f3f, #9b9b9b);
+    padding: 2%;
+    border-radius: 25px;
+}
+dt{
+    padding: 2%;
+}
+
+
+
+/* ROTATION */
+.rotateleft, .rotateright{
+    size: 20%;
+    padding: 1% 10%;
+    background: #3f3f3f;
+    border-radius: 20px;
+}
+.rotateleft{
+    transform: rotate(-25deg);
+}
+.rotateright{
+    transform: rotate(25deg);
+}
+
+
+/* FORMES GEOMETRIQUES */
+#formesflex{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.carre{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    margin: 1%;
+}
+.cercle{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 1%;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #fff;
+    margin: 1%;
+}
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    margin: 1%;
+}
+.ovale{
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    border-radius: 100px / 50px;
+    margin: 1%;
+}
+.trapeze{
+    border-bottom: 100px solid #fff;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+    margin: 1%
+}
+/* formes de CSS Tricks */
+
+
+
+
+/* TRANSITION */
+.bouton{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px #fff;
+    border-radius: 30px;
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color:#fff;
+}
+.bouton:hover{
+    background-color: #fff;
+    color:#000;
+    -webkit-transition: .5s; 
+    font-weight: bold;
+}
+.bouton:active{
+    background-color: rgb(124, 112, 115);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0);
+    -webkit-transition: .1s;
+}
+
+
+
+/* FLEX HORIZONTAL */
+#horizontal{
+    display: flex;
+    justify-content: space-around;
+}
+#horizontal  p{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+/* TEXT SHADOW */
+#ombretexte{
+    text-shadow: #fff 0 5px 10px;
+    : 3% 1%;
+}
+
+/* SÉLECTEURS */
+#selecteur{
+    display: flex;
+    justify-content: space-around;
+}
+#selecteur p{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+#selecteur :nth-child(2){
+    background-color: #9b9b9b;
+    border-radius: 25%;
+}
+
+
+/* FLEX VERTICAL */
+#vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#vertical  p{
+    background: url(images/logo-blanc.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}

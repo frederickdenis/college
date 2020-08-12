@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- STYLE BOOTSTRAP COMPILÉ (NPM INSTALL, MODIFIER, NPM RUN CSS/JS POUR RECOMPILER) -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+    <style>
+      .gras{
+        font-weight: bolder;
+      }
+    </style>
+
+    <title>JSON - Pratique 1</title>
+  </head>
+  <body>
+    <div class="mon-test text-center pt-5">
+
+    </div>
+
+      <!-- LIBRAIRIES LOCALES (CTRL-C/V CDN DANS URL, SAVE AS ET DEPOSER DANS LE DOSSIER DIST) -->
+  <script src="dist/js/jquery.slim.min.js"></script>
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+          
+    var meteo = {"temperature":26, "humidite":80, "barometre":"variable"};
+
+    for (var prop in meteo){
+        var propriete = prop;
+        var valeur = meteo[prop];
+
+        console.log("La propriété " + propriete + " a la valeur de " + valeur);
+        document.querySelector(".mon-test").innerHTML += "La propriété <em>" + propriete + "</em> a la valeur de <span class='gras'>" + valeur + "</span><br>";
+    }
+  </script>
+  </body>
+</html>

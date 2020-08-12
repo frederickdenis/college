@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logoicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>auto columns</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: #000;
+            font-family: "Open Sans", sans-serif;
+        }
+        header{
+            color: #fff;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns:auto auto auto;
+            grid-template-rows: auto auto;
+            grid-gap: 10px;
+            grid-auto-flow: column;
+            grid-auto-columns: 220px;
+        }
+        .grid-container > div{
+            border: 2px solid #2f2f2f;
+            text-align: center;
+            background-color: rgb(255, 238, 0);
+            font-size: 1em;
+        }
+        .item3{
+            grid-column: auto /span2;
+            grid-auto-flow: row dense;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>grid auto columns</h1>
+            <h3>par Frederick Denis</h3>
+        </header>
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="item3">3</div>
+            <div>4</div>
+        </div>
+        <footer>
+        </footer>
+    </main>
+    <script>
+        // INSÉRER SCRIPT ICI
+
+
+        // INITIALISATION DES VARIABLES GLOBALES (BOUTONS ETC..)
+
+        // FONCTIONS GLOBALES ($, ETC...)
+
+        // FONCTION SPÉCIFIQUES
+
+        // APPEL DES FONCTIONS (MAIN ET AEL)
+
+        
+        
+        
+        //TEST NAVIGATEUR MOBILE
+
+        // if(/Android | webOS | iPhone | iPad | iPod | Blackberry | IEmobile | Opera Mini/i
+        //     .test(navigator.userAgent)){
+        //         alert("Plateforme mobile.");
+        // }
+    </script>
+</body>
+</html>

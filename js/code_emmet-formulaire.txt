@@ -1,0 +1,1 @@
+form#formAchatTV[action method autocomplete=off]>label[for=combienArgent]{Entrez le montant}+input#combienArgent[name=combienArgent value=0 size=7]+btn:s{OK}
